@@ -92,36 +92,6 @@ Return	:
 Notes   :
 ============================================================================*/
 void checkRadio() {
-  // if radio data is ready
-  /*if (radioEvent)
-      {
-          bool tx, fail, rx;
-          whatHappened(&tx, &fail, &rx);
-
-          if (rx)
-          {
-              setRedLed(5);
-              handleIncomingRadioMessage();
-              if (isRxFifoEMpty())
-              {
-                  radioEvent = false;
-                  clearInterruptFlag(true, false, false);
-              }
-              resetCommunicationWatchdog();
-          }
-          if (fail)
-          {
-              flush_tx();
-              clearInterruptFlag(false, false, true);
-              radioEvent = false;
-          }
-          if (tx)
-          {
-              clearInterruptFlag(false, true, false);
-              radioEvent = false;
-          }
-      }
-      */
   if (radioEvent) {
     bool tx, fail, rx;
     whatHappened(&tx, &fail, &rx);
@@ -163,7 +133,6 @@ void handleIncomingRadioMessage() {
     if (msg.header.id == RECEIVER_ID) {
       switch (msg.header.type) {
       case TYPE_UPDATE:
-        //setRedLed(0);
         break;
       case TYPE_MOTORS_VELOCITY:
         setMotor1((int8_t)msg.payload[0]);
@@ -176,7 +145,6 @@ void handleIncomingRadioMessage() {
 
       case TYPE_NEW_ROBOT:
         if (!isAddressValid) {
-          //stopListening();
           
           setRobotId(msg.payload[0]);
           memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
@@ -184,13 +152,6 @@ void handleIncomingRadioMessage() {
 
           openCommunication();
         
-          /*Position position;
-          position.x = 100;
-          position.y = 200;
-          float orientation = 2.1; 
-          uint8_t touch = 12;
-     
-          prepareMessageToSend(&position, &orientation, &touch);*/
           startListening();
           setBlueLed(5);
           if (DEBUG_ENABLED())

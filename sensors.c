@@ -268,14 +268,6 @@ bool updateRobotPosition()
     if (positionBitBuffer[1].count >= SIZEOF_PATTERN)
         readyToUpdate1 = calculatePhotodiodePosition(1);
 
-    /*if(readyToUpdate0 == true){
-
-      robotPosition.x = (photoDiodesPositions[0].x);
-      robotPosition.y = (photoDiodesPositions[0].y);
-      readyToUpdate0 = false;
-      return true;
-    }*/
-
     //if all photodiodes have decoded their patterns
     if (readyToUpdate0 == true && readyToUpdate1 == true)
     {

@@ -66,27 +66,8 @@ int main(void)
 {
     initRobot();
     setGreenLed(5);
-    Position position;
-    position.x = 100;
-    position.y = 200;
-    float orientation = 2.1; 
-    uint8_t touch = 12;
-    // stopListening();
-    //startListening();
-    //prepareMessageToSend(&position, &orientation, &touch);
-    //startListening();
     while (1)
     {     
-          /*bool tx, fail, rx;
-          whatHappened(&tx, &fail, &rx);
-          clearInterruptFlag(rx, tx, fail);
-          if (rx)
-            setBlueLed(5);
-            //setRedLed(5);
-            //sendAddressRequest();
-            if (fail) {
-              flush_tx();
-            }*/
         checkRadio();
         //checkTouch();
         updateRobot();
