@@ -37,11 +37,11 @@
 #define SIZEOF_START                          1
 #define SIZEOF_COLUMN                         10
 #define SIZEOF_ROW                            10
-#define SIZEOF_END                            20 // number of white bits in the end pattern
+#define SIZEOF_END                            21 // number of white bits in the end pattern
 #define SIZEOF_PATTERN                        42
 
 #define NB_PHOTODIODES                        2 // number of photodiodes
-#define BIT_DURATION                          18500  // Exposure time in microsec
+#define BIT_DURATION                          468  // Exposure time in microsec
 #define BLACK                                 0
 #define WHITE                                 1
 #define PI                                    3.14159265358979323846f
@@ -58,7 +58,7 @@
 #define RADIO_CHANNEL                         88 //channel at which you want to communicate through
 #define PAYLOAD_SIZE                          8  //size of the data from master to slave
 #define PAYLOAD_MAX_SIZE                      32
-#define DEFAULT_ADDRESS                       0xF0F0F0F0D000
+#define DEFAULT_ADDRESS                       0xF0F0F0F0D0 //00
 #define COMMUNICATION_TIMEOUT                 2000 //in ms
 
 #define RECEIVER_ID                           250

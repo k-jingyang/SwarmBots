@@ -1,7 +1,7 @@
 SwarmBots\ THUMB\ Release/colors.o: \
- C:\Users\USER\Desktop\SwarmUI-Jing\ Yang\Software\Microcontroller\SwarmBots\ v2\colors.c \
- C:\Users\USER\Desktop\SwarmUI-Jing\ Yang\Software\Microcontroller\SwarmBots\ v2\colors.h \
- C:\Users\USER\Desktop\SwarmUI-Jing\ Yang\Software\Microcontroller\SwarmBots\ v2\config.h \
+ C:\Users\USER\Desktop\SwarmUI-master\Software\Microcontroller\SwarmBots\ v2\colors.c \
+ C:\Users\USER\Desktop\SwarmUI-master\Software\Microcontroller\SwarmBots\ v2\colors.h \
+ C:\Users\USER\Desktop\SwarmUI-master\Software\Microcontroller\SwarmBots\ v2\config.h \
  ../../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h \
  C:/Users/USER/AppData/Local/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM/v4/packages/targets/CMSIS_3/CMSIS/Include/core_cm0.h \
@@ -33,7 +33,7 @@ SwarmBots\ THUMB\ Release/colors.o: \
  ../../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  ../../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  ../../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
- C:\Users\USER\Desktop\SwarmUI-Jing\ Yang\Software\Microcontroller\SwarmBots\ v2\stm32f0xx_it.h \
+ C:\Users\USER\Desktop\SwarmUI-master\Software\Microcontroller\SwarmBots\ v2\stm32f0xx_it.h \
  C:/Program\ Files/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM\ 4.0/include/string.h \
  C:/Program\ Files/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM\ 4.0/include/math.h \
  C:/Program\ Files/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM\ 4.0/include/__cross_studio_io.h \

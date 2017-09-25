@@ -9,7 +9,7 @@
 
 
 /* Includes ------------------------------------------------------------------*/
-#include "config.h" 
+#include "config.h"
 #include "utilities.h"
 #include "RF24.h"
 

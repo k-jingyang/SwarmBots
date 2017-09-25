@@ -175,7 +175,6 @@ void readPhotoDiode(uint8_t photodiodeId)
                 for (uint8_t i = 0; i < nbBits; i++)
                     RingBuffer_push(&positionBitBuffer[photodiodeId], value);
 
-
             }
         }
         else
@@ -214,9 +213,10 @@ bool calculatePhotodiodePosition(uint8_t photodiodeId)
                 break;
             }
         }
-        
+
         if (endFound)
         {
+
             __disable_irq();
             //decode gray code for x
             uint16_t grayTmp = RingBuffer_get(&positionBitBuffer[photodiodeId], SIZEOF_START);
@@ -267,8 +267,17 @@ bool updateRobotPosition()
 
     if (positionBitBuffer[1].count >= SIZEOF_PATTERN)
         readyToUpdate1 = calculatePhotodiodePosition(1);
+
+    /*if(readyToUpdate0 == true){
+
+      robotPosition.x = (photoDiodesPositions[0].x);
+      robotPosition.y = (photoDiodesPositions[0].y);
+      readyToUpdate0 = false;
+      return true;
+    }*/
+
     //if all photodiodes have decoded their patterns
-    /*if (readyToUpdate0 == true && readyToUpdate1 == true)
+    if (readyToUpdate0 == true && readyToUpdate1 == true)
     {
         robotPosition.x = (photoDiodesPositions[1].x + photoDiodesPositions[0].x) / 2;
         robotPosition.y = (photoDiodesPositions[1].y + photoDiodesPositions[0].y) / 2;
@@ -280,7 +289,7 @@ bool updateRobotPosition()
         readyToUpdate0 = false;
         readyToUpdate1 = false;
         return true;
-    }*/
+    }
     return false;
 }
 

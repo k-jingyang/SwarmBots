@@ -1,6 +1,7 @@
 #include "radio.h"
 #include "led.h"
 
+
 bool isRadioInitialized = false;
 volatile uint32_t communicationWatchdog = 0;
 
@@ -11,7 +12,7 @@ Name    :   initRadio
 ------------------------------------------------------------------------------
 Purpose :   initializes the Radio, with the SPI communication first and then
 	    the NRF24L01+ chip
-Input   :   
+Input   :
 Output  :   none
 Return	:
 Notes   :
@@ -41,10 +42,10 @@ bool initRadio()
             }
 
             resetCommunicationWatchdog();
-            
+
             openReadingPipe(0, DEFAULT_ADDRESS);
             openWritingPipe(DEFAULT_ADDRESS);
-//            startListening();
+            startListening();
             isRadioInitialized = true;
         }
     }
@@ -55,14 +56,14 @@ bool initRadio()
 Name    :   sendRadioMessage
 ------------------------------------------------------------------------------
 Purpose :   Send a framed message through radio to the current SwarmBots
-Input   :    
-Output  :   
-Return	: 
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void sendRadioMessage(Message *msg, uint8_t size)
 {
-    startWrite((uint8_t *)msg, size);
+    writeRadio((uint8_t *)msg, size);
 }
 
 /*============================================================================
@@ -70,19 +71,16 @@ Name    :   sendAddressRequest
 ------------------------------------------------------------------------------
 Purpose :   sends a message to the given robot to ask for its position
 Input   :   robotId : id of the robot to ask for position
-Output  :   
-Return	:  
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void sendAddressRequest()
 {
-    if(DEBUG_ENABLED())
-      debug_printf("send request\n");
-
     setGreenLed(5);
-
     Message msg;
     msg.header.type = TYPE_NEW_ROBOT;
+
     msg.header.id = 255;
 
     openWritingPipe(DEFAULT_ADDRESS);
@@ -102,9 +100,9 @@ void sendAddressRequest()
 Name    :   resetCommunicationWatchdog
 ------------------------------------------------------------------------------
 Purpose :   resets the communication watchdog counter
-Input   :   
-Output  :   
-Return	:  
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void resetCommunicationWatchdog()
@@ -117,8 +115,8 @@ Name    :   tickCommunicationWatchdog
 ------------------------------------------------------------------------------
 Purpose :   decrements the watchdog counter
 Input   :   millis: milliseconds to decrement the watchdog counter
-Output  :   
-Return	:  
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void tickCommunicationWatchdog(uint8_t millis)
@@ -133,9 +131,9 @@ void tickCommunicationWatchdog(uint8_t millis)
 Name    :   remainingCommunicationWatchdog
 ------------------------------------------------------------------------------
 Purpose :   gives the amount of time before the end of the watchdog counter
-Input   :   
-Output  :   
-Return	:  
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 uint32_t remainingCommunicationWatchdog()
@@ -148,8 +146,8 @@ Name    :   setRobotPipeAddress
 ------------------------------------------------------------------------------
 Purpose :   sets the pipe address to the value in parameter
 Input   :   _pipeAddress
-Output  :   
-Return	:  
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void setRobotPipeAddress(uint64_t _pipeAddress)
@@ -162,8 +160,8 @@ Name    :   setRobotId
 ------------------------------------------------------------------------------
 Purpose :  sets the id to the value in parameter
 Input   :   _id
-Output  :   
-Return	:  
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void setRobotId(uint8_t _id)
@@ -175,9 +173,9 @@ void setRobotId(uint8_t _id)
 Name    :   getRobotPipeAddress
 ------------------------------------------------------------------------------
 Purpose :   return the current pipe address
-Input   :   
-Output  :   
-Return	:  
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 uint64_t getRobotPipeAddress()
@@ -189,9 +187,9 @@ uint64_t getRobotPipeAddress()
 Name    :   getRobotId
 ------------------------------------------------------------------------------
 Purpose :  return the current Id
-Input   :   
-Output  :   
-Return	:  
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 uint8_t getRobotId()
@@ -203,9 +201,9 @@ uint8_t getRobotId()
 Name    :   openCommunication
 ------------------------------------------------------------------------------
 Purpose :   opens the writing and reading pipe for the given robot
-Input   :   
-Output  :   
-Return	: 
+Input   :
+Output  :
+Return	:
 Notes   :
 ============================================================================*/
 void openCommunication()

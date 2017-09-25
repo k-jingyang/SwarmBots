@@ -1,5 +1,6 @@
 #include "functions.h"
 #include "colors.h"
+#include <stdlib.h>
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -32,23 +33,22 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void initRobot()
-{
-    HAL_Init();
-    SystemClock_Config();
+void initRobot() {
+  HAL_Init();
+  SystemClock_Config();
 
-    initRGBLed();
+  initRGBLed();
 
-    initMotors();
+  initMotors();
 
-    if (!initSensors())
-        Error_Handler();
+  if (!initSensors())
+    Error_Handler();
 
-    if (!initRadio())
-        Error_Handler();
+  if (!initRadio())
+    Error_Handler();
 
-    initPhotoDiodes();
-    chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
+  initPhotoDiodes();
+  chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
 }
 
 /*============================================================================
@@ -61,13 +61,12 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void updateRobot()
-{
+void updateRobot() {
 
-    if (updateRobotPosition()){
+  if (updateRobotPosition()) {
 
-        prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
-    }
+    prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
+  }
 }
 
 /*============================================================================
@@ -79,9 +78,8 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void sleep()
-{
-    SleepMode_Measure();
+void sleep() {
+  SleepMode_Measure();
 }
 
 /*============================================================================
@@ -93,41 +91,53 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void checkRadio()
-{
-    // if radio data is ready
-    if (radioEvent)
-    {
-        bool tx, fail, rx;
-        whatHappened(&tx, &fail, &rx);
+void checkRadio() {
+  // if radio data is ready
+  /*if (radioEvent)
+      {
+          bool tx, fail, rx;
+          whatHappened(&tx, &fail, &rx);
 
-        if (rx)
-        {
-            handleIncomingRadioMessage();
-            if (isRxFifoEMpty())
-            {
-                radioEvent = false;
-                clearInterruptFlag(true, false, false);
-            }
-            resetCommunicationWatchdog();
-        }
-        if (fail)
-        {
-            flush_tx();
-            clearInterruptFlag(false, false, true);
-            radioEvent = false;
-        }
-        if (tx)
-        {
-            clearInterruptFlag(false, true, false);
-            radioEvent = false;
-        }
-    }
-    if (remainingCommunicationWatchdog() == 0)
-    {
-        isAddressValid = false;
+          if (rx)
+          {
+              setRedLed(5);
+              handleIncomingRadioMessage();
+              if (isRxFifoEMpty())
+              {
+                  radioEvent = false;
+                  clearInterruptFlag(true, false, false);
+              }
+              resetCommunicationWatchdog();
+          }
+          if (fail)
+          {
+              flush_tx();
+              clearInterruptFlag(false, false, true);
+              radioEvent = false;
+          }
+          if (tx)
+          {
+              clearInterruptFlag(false, true, false);
+              radioEvent = false;
+          }
+      }
+      */
+  if (radioEvent) {
+    bool tx, fail, rx;
+    whatHappened(&tx, &fail, &rx);
+    clearInterruptFlag(rx, tx, fail);
+    radioEvent = false;
+    if (rx)
+      handleIncomingRadioMessage();
+      if (fail) {
+        flush_tx();
+      }
+  }
+  if (remainingCommunicationWatchdog() == 0 && isAddressValid == false)
+  {
+        //isAddressValid = false;
         sendAddressRequest();
-    }
+  }
 }
 
 /*============================================================================
@@ -139,56 +149,64 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void handleIncomingRadioMessage()
-{
-    Position tmpPosition = {0,0};
-    uint64_t tmpPipeAddress = 0;
-    uint8_t payloadSize = getDynamicPayloadSize();
-    if (payloadSize > PAYLOAD_MAX_SIZE)
-        flush_rx();
-    else
-    {
-        Message msg;
-        memset(&msg, 0, sizeof(msg));
-        readRadio((uint8_t *)&msg, payloadSize);
+void handleIncomingRadioMessage() {
+  Position tmpPosition = {0, 0};
+  uint64_t tmpPipeAddress = 0;
+  uint8_t payloadSize = getDynamicPayloadSize();
+  if (payloadSize > PAYLOAD_MAX_SIZE)
+    flush_rx();
+  else {
+    Message msg;
+    memset(&msg, 0, sizeof(msg));
+    readRadio((uint8_t *)&msg, payloadSize);
+    setRedLed(0);
+    if (msg.header.id == RECEIVER_ID) {
+      switch (msg.header.type) {
+      case TYPE_UPDATE:
+        //setRedLed(0);
+        break;
+      case TYPE_MOTORS_VELOCITY:
+        setMotor1((int8_t)msg.payload[0]);
+        setMotor2((int8_t)msg.payload[1]);
 
-        if (msg.header.id == RECEIVER_ID)
-        {
-            switch (msg.header.type)
-            {
-            case TYPE_UPDATE:
-            case TYPE_MOTORS_VELOCITY:
-                setMotor1((int8_t)msg.payload[0]);
-                setMotor2((int8_t)msg.payload[1]);
-                setRGBLed(msg.payload[2] / 8, msg.payload[3] / 8, msg.payload[4] / 8);
+        setRGBLed(msg.payload[2] / 8, msg.payload[3] / 8, msg.payload[4] / 8);
 
-                prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
-                break;
+        prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
+        break;
 
-            case TYPE_NEW_ROBOT:
-                if(!isAddressValid)
-                {
-                    setRobotId(msg.payload[0]);
-                    memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
-                    setRobotPipeAddress(tmpPipeAddress);
+      case TYPE_NEW_ROBOT:
+        if (!isAddressValid) {
+          //stopListening();
+          
+          setRobotId(msg.payload[0]);
+          memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
+          setRobotPipeAddress(tmpPipeAddress);
 
-                    openCommunication();
-                    startListening();
-
-                    if (DEBUG_ENABLED())
-                        debug_printf("Info received, id=%d | address=0x%x\n", getRobotId(), getRobotPipeAddress());
-                    isAddressValid = true;
-                }
-                break;
-
-            case TYPE_REBOOT_ROBOT:
-                Reboot();
-                break;
-            default:
-                break;
-            }
+          openCommunication();
+        
+          /*Position position;
+          position.x = 100;
+          position.y = 200;
+          float orientation = 2.1; 
+          uint8_t touch = 12;
+     
+          prepareMessageToSend(&position, &orientation, &touch);*/
+          startListening();
+          setBlueLed(5);
+          if (DEBUG_ENABLED())
+            debug_printf("Info received, id=%d | address=0x%x\n", getRobotId(), getRobotPipeAddress());
+          isAddressValid = true;
         }
+        break;
+
+      case TYPE_REBOOT_ROBOT:
+        Reboot();
+        break;
+      default:
+        break;
+      }
     }
+  }
 }
 
 /*============================================================================
@@ -203,29 +221,27 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void prepareMessageToSend(Position *position, float *orientation, uint8_t *touch)
-{
-    int16_t tmpOrientation = 0;
-    Message msg;
-    msg.header.id = getRobotId();
-    msg.header.type = TYPE_STATUS;
+void prepareMessageToSend(Position *position, float *orientation, uint8_t *touch) {
+  int16_t tmpOrientation = 0;
+  Message msg;
+  msg.header.id = getRobotId();
+  msg.header.type = TYPE_STATUS;
 
-    if (isAddressValid)
-    {
-        if (position && orientation && touch)
-        {
-            tmpOrientation = (int16_t)(*orientation * 100.0f);
+  if (isAddressValid) {
+    if (position && orientation && touch) {
+      setRedLed(5);
+      tmpOrientation = (int16_t)(*orientation * 100.0f);
 
+      memcpy_fast(msg.payload, (uint8_t *)position, sizeof(*position));
+      memcpy_fast(msg.payload + sizeof(*position), (uint8_t *)&tmpOrientation, sizeof(tmpOrientation));
+      memcpy_fast(msg.payload + sizeof(*position) + sizeof(tmpOrientation), touch, sizeof(*touch));
 
-            memcpy_fast(msg.payload, (uint8_t *)position, sizeof(*position));
-            memcpy_fast(msg.payload + sizeof(*position), (uint8_t *)&tmpOrientation, sizeof(tmpOrientation));
-            memcpy_fast(msg.payload + sizeof(*position) + sizeof(tmpOrientation), touch, sizeof(*touch));
+      //            memcpy_fast(msg.payload+sizeof(*position)+sizeof(*tmpOrientation)+sizeof(*touch), &photoDiodesPositions[0], 2*sizeof(Position));
 
-            //            memcpy_fast(msg.payload+sizeof(*position)+sizeof(*tmpOrientation)+sizeof(*touch), &photoDiodesPositions[0], 2*sizeof(Position));
-
-            writeAckPayload(0, (uint8_t *)&msg, sizeof(Header) + sizeof(*position) + sizeof(tmpOrientation) + sizeof(*touch)); // + 2*sizeof(Position));
-        }
+      writeAckPayload(0, (uint8_t *)&msg, sizeof(Header) + sizeof(*position) + sizeof(tmpOrientation) + sizeof(*touch)); // + 2*sizeof(Position));
+      
     }
+  }
 }
 
 /*============================================================================
@@ -238,17 +254,14 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void checkTouch()
-{
-    // if a new touch happened
-    if (touchChanged)
-    {
-        currentTouch = readQTKeyStatus();
-        if (HAL_GPIO_ReadPin(TOUCH_CHANGE_GPIO_PORT, TOUCH_CHANGE_PIN) == HIGH)
-        {
-            touchChanged = false;
-        }
+void checkTouch() {
+  // if a new touch happened
+  if (touchChanged) {
+    currentTouch = readQTKeyStatus();
+    if (HAL_GPIO_ReadPin(TOUCH_CHANGE_GPIO_PORT, TOUCH_CHANGE_PIN) == HIGH) {
+      touchChanged = false;
     }
+  }
 }
 
 /*============================================================================
@@ -260,20 +273,18 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void switchToChargingMode()
-{
-    setGreenLed(0);
-    setBlueLed(0);
-    powerDown();
-    setMotor1(0);
-    setMotor2(0);
+void switchToChargingMode() {
+  setGreenLed(0);
+  setBlueLed(0);
+  powerDown();
+  setMotor1(0);
+  setMotor2(0);
 
-    while (chargingStatus == CHARGING)
-    {
-        glowRedLed();
-    }
+  while (chargingStatus == CHARGING) {
+    glowRedLed();
+  }
 
-    powerUp();
+  powerUp();
 }
 
 /*============================================================================
@@ -286,30 +297,28 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-    //Touch change IRQ
-    if (GPIO_Pin & TOUCH_CHANGE_PIN)
-        touchChanged = true;
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+  //Touch change IRQ
+  if (GPIO_Pin & TOUCH_CHANGE_PIN)
+    touchChanged = true;
 
-    if (GPIO_Pin & PHOTODIODE_1_PIN)
-        readPhotoDiode(0);
-    //
-    if (GPIO_Pin & PHOTODIODE_2_PIN)
-        readPhotoDiode(1);
+  if (GPIO_Pin & PHOTODIODE_1_PIN)
+    readPhotoDiode(0);
+  //
+  if (GPIO_Pin & PHOTODIODE_2_PIN)
+    readPhotoDiode(1);
 
-    //charger IRQ
-    if ((GPIO_Pin & CHARGING_STATUS_PIN) > 0)
-    {
-        chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
-        if (chargingStatus == CHARGING)
-            switchToChargingMode();
-    }
+  //charger IRQ
+  if ((GPIO_Pin & CHARGING_STATUS_PIN) > 0) {
+    chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
+    if (chargingStatus == CHARGING)
+      switchToChargingMode();
+  }
 
-    //nRF IRQ
-    if ((GPIO_Pin & RADIO_IRQ_PIN) > 0)
-        radioEvent = true;
+  //nRF IRQ
+  if ((GPIO_Pin & RADIO_IRQ_PIN) > 0)
+    radioEvent = true;
 
-    //IMU IRQ
-    //    if(GPIO_Pin && IMU_INT_PIN)
+  //IMU IRQ
+  //    if(GPIO_Pin && IMU_INT_PIN)
 }

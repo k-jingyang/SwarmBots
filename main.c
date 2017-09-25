@@ -66,33 +66,29 @@ int main(void)
 {
     initRobot();
     setGreenLed(5);
-    Message msg;
-    msg.header.type = TYPE_NEW_ROBOT;
-    msg.header.id = 255;
-    stopListening();
-    openWritingPipe(DEFAULT_ADDRESS);
-    openReadingPipe(0, DEFAULT_ADDRESS);
+    Position position;
+    position.x = 100;
+    position.y = 200;
+    float orientation = 2.1; 
+    uint8_t touch = 12;
+    // stopListening();
+    //startListening();
+    //prepareMessageToSend(&position, &orientation, &touch);
+    //startListening();
     while (1)
-    {   
-        //HAL_Delay(100);
-        myTestFunction(&msg);
-        /*checkRadio();
-        checkTouch();
-        updateRobot();*/
+    {     
+          /*bool tx, fail, rx;
+          whatHappened(&tx, &fail, &rx);
+          clearInterruptFlag(rx, tx, fail);
+          if (rx)
+            setBlueLed(5);
+            //setRedLed(5);
+            //sendAddressRequest();
+            if (fail) {
+              flush_tx();
+            }*/
+        checkRadio();
+        //checkTouch();
+        updateRobot();
     }
 }
-
-void myTestFunction(Message* msg){
-    if(updateRobotPosition()){
-      //setBlueLed(5);
-      Position* pos = getRobotPosition();
-      msg->payload[0] = pos->x;
-      msg->payload[1] = pos->y;
-      sendRadioMessage(msg, sizeof(Message));
-    }
-    //msg->payload[0] = 1;
-    //msg->payload[1] = 2;
-    //sendRadioMessage(msg, sizeof(Message));
-}
-
-
