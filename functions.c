@@ -18,7 +18,7 @@ volatile bool radioEvent = false;
 bool positionSent = true;
 uint8_t currentTouch = 0;
 bool isAddressValid = false;
-Target currentGoal = {300, 300, 0, 1};
+Target currentGoal = {500, 500, 0, 1};
 //motor motorValues = {0, 0, 1.0f, 22, MAX_SPEED, 60};
 Motor motorValues = {0, 0, 1.0f, 20, 30, 35, false};
 bool isPositionControl = true;
@@ -157,7 +157,7 @@ void handleIncomingRadioMessage() {
     Message msg;
     memset(&msg, 0, sizeof(msg));
     readRadio((uint8_t *)&msg, payloadSize);
-    setRedLed(0);
+    
     if (msg.header.id == RECEIVER_ID) {
       switch (msg.header.type) {
       case TYPE_UPDATE:
@@ -170,19 +170,20 @@ void handleIncomingRadioMessage() {
         prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
         break;
       case TYPE_ROBOT_POSITION:
+        setGreenLed(5);
         isPositionControl = true;
         positionMessage = (PositionControlMessage*)msg.payload;
         currentGoal.x = positionMessage->positionX;
         currentGoal.y = positionMessage->positionY;
-        setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
-        currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
+        //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
+        /*currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
 
         motorValues.preferredVelocity = positionMessage->preferredSpeed;
         if(motorValues.preferredVelocity > MAX_SPEED)
           motorValues.preferredVelocity = MAX_SPEED;
         if(motorValues.preferredVelocity < -MAX_SPEED)
-          motorValues.preferredVelocity = -MAX_SPEED;
-//                currentGoal.finalGoal = (bool)positionMessage->isFinalGoal;
+          motorValues.preferredVelocity = -MAX_SPEED;*/
+        currentGoal.finalGoal = (bool)positionMessage->isFinalGoal;
         prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
         break;      
       case TYPE_NEW_ROBOT:
