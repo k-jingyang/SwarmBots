@@ -16,6 +16,8 @@ bool firstBitEver[NB_PHOTODIODES];
 bool readyToUpdate0 = false;
 bool readyToUpdate1 = false;
 
+bool blinded = false;
+
 /*============================================================================
 Name    :   initSensors
 ------------------------------------------------------------------------------
@@ -262,6 +264,7 @@ Notes   :
 ============================================================================*/
 bool updateRobotPosition()
 {
+    static uint32_t lastPositionTimestamp = 0;
     if (positionBitBuffer[0].count >= SIZEOF_PATTERN)
         readyToUpdate0 = calculatePhotodiodePosition(0);
 
@@ -271,16 +274,25 @@ bool updateRobotPosition()
     //if all photodiodes have decoded their patterns
     if (readyToUpdate0 == true && readyToUpdate1 == true)
     {
+        lastPositionTimestamp = HAL_GetTick();
         robotPosition.x = (photoDiodesPositions[1].x + photoDiodesPositions[0].x) / 2;
         robotPosition.y = (photoDiodesPositions[1].y + photoDiodesPositions[0].y) / 2;
 
         robotOrientation = atan2f((float)(photoDiodesPositions[1].y - photoDiodesPositions[0].y),
                                         (float)(photoDiodesPositions[1].x - photoDiodesPositions[0].x)) * RAD_TO_DEG_CST + 90.0f;
-//        angle = (angle > 0.0f) ? 180.0f - angle : -180.0f - angle;
+        if(robotOrientation > 180.0f)
+            robotOrientation -= 360.0f;
 
         readyToUpdate0 = false;
         readyToUpdate1 = false;
+        blinded = false;
+        setGreenLed(0);
         return true;
+    }
+    // no new position for a while then stop
+    else if(HAL_GetTick()-lastPositionTimestamp > 100){
+        
+        blinded = true;
     }
     return false;
 }
@@ -300,15 +312,29 @@ Position* getRobotPosition()
 }
 
 /*============================================================================
-Name    :   getRobotOrientation
+Name    :   getRobotAngle
 ------------------------------------------------------------------------------
-Purpose :   returns the current orienation of the robot
+Purpose :   returns the current orientation of the robot
 Input   :
 Output  :
 Return	:
 Notes   :
 ============================================================================*/
-float* getRobotOrientation()
+float* getRobotAngle()
 {
   return &robotOrientation;
+}
+
+/*============================================================================
+Name    :   isBlinded
+------------------------------------------------------------------------------
+Purpose :   indicates if the robot is blinded
+Input   :
+Output  :
+Return	:   boolean: true if blinded, false otherwise
+Notes   :
+============================================================================*/
+bool isBlinded()
+{
+   return blinded;
 }

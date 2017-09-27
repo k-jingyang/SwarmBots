@@ -66,8 +66,10 @@ int main(void)
 {
     initRobot();
     setGreenLed(5);
+    //setMotor1(20);
+    //setMotor2(0);
     while (1)
-    {     
+    {
         checkRadio();
         //checkTouch();
         updateRobot();

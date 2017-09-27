@@ -18,6 +18,12 @@ volatile bool radioEvent = false;
 bool positionSent = true;
 uint8_t currentTouch = 0;
 bool isAddressValid = false;
+Target currentGoal = {300, 300, 0, 1};
+//motor motorValues = {0, 0, 1.0f, 22, MAX_SPEED, 60};
+Motor motorValues = {0, 0, 1.0f, 20, 30, 35, false};
+bool isPositionControl = true;
+volatile bool aligned = false;
+float targetAngle = 0.0f;
 volatile CHARGING_STATE_t chargingStatus = DISCONNECTED;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -48,6 +54,8 @@ void initRobot() {
     Error_Handler();
 
   initPhotoDiodes();
+
+  //while(calibrate(&motorValues) == false);
   chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
 }
 
@@ -62,10 +70,30 @@ Return	:
 Notes   :
 ============================================================================*/
 void updateRobot() {
+  bool reached = false;
+  
 
   if (updateRobotPosition()) {
+    /*if(!aligned){
+      myFunction(0,0, &motorValues, &aligned);
+    }*/
+    prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
+    if (isPositionControl)
+    {
+      positionControl(currentGoal.x, currentGoal.y, currentGoal.angle, &motorValues, &reached, false, currentGoal.finalGoal);
+      minimumc(&motorValues.motor1, motorValues.minVelocity);
+      minimumc(&motorValues.motor2, motorValues.minVelocity);
+      maximumc(&motorValues.motor1, motorValues.maxVelocity);
+      maximumc(&motorValues.motor2, motorValues.maxVelocity);
 
-    prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
+      setMotor1(motorValues.motor1);
+      setMotor2(motorValues.motor2);// * motorValues.motorGain);
+    }
+  }
+  if(isBlinded())
+  {
+        setMotor1(0);
+        setMotor2(0);
   }
 }
 
@@ -105,7 +133,6 @@ void checkRadio() {
   }
   if (remainingCommunicationWatchdog() == 0 && isAddressValid == false)
   {
-        //isAddressValid = false;
         sendAddressRequest();
   }
 }
@@ -122,6 +149,7 @@ Notes   :
 void handleIncomingRadioMessage() {
   Position tmpPosition = {0, 0};
   uint64_t tmpPipeAddress = 0;
+  PositionControlMessage* positionMessage;
   uint8_t payloadSize = getDynamicPayloadSize();
   if (payloadSize > PAYLOAD_MAX_SIZE)
     flush_rx();
@@ -135,23 +163,37 @@ void handleIncomingRadioMessage() {
       case TYPE_UPDATE:
         break;
       case TYPE_MOTORS_VELOCITY:
+        isPositionControl = false;
         setMotor1((int8_t)msg.payload[0]);
         setMotor2((int8_t)msg.payload[1]);
-
         setRGBLed(msg.payload[2] / 8, msg.payload[3] / 8, msg.payload[4] / 8);
-
-        prepareMessageToSend(getRobotPosition(), getRobotOrientation(), &currentTouch);
+        prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
         break;
+      case TYPE_ROBOT_POSITION:
+        isPositionControl = true;
+        positionMessage = (PositionControlMessage*)msg.payload;
+        currentGoal.x = positionMessage->positionX;
+        currentGoal.y = positionMessage->positionY;
+        setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
+        currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
 
+        motorValues.preferredVelocity = positionMessage->preferredSpeed;
+        if(motorValues.preferredVelocity > MAX_SPEED)
+          motorValues.preferredVelocity = MAX_SPEED;
+        if(motorValues.preferredVelocity < -MAX_SPEED)
+          motorValues.preferredVelocity = -MAX_SPEED;
+//                currentGoal.finalGoal = (bool)positionMessage->isFinalGoal;
+        prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
+        break;      
       case TYPE_NEW_ROBOT:
         if (!isAddressValid) {
-          
+
           setRobotId(msg.payload[0]);
           memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
           setRobotPipeAddress(tmpPipeAddress);
 
           openCommunication();
-        
+
           startListening();
           setBlueLed(5);
           if (DEBUG_ENABLED())
@@ -200,7 +242,7 @@ void prepareMessageToSend(Position *position, float *orientation, uint8_t *touch
       //            memcpy_fast(msg.payload+sizeof(*position)+sizeof(*tmpOrientation)+sizeof(*touch), &photoDiodesPositions[0], 2*sizeof(Position));
 
       writeAckPayload(0, (uint8_t *)&msg, sizeof(Header) + sizeof(*position) + sizeof(tmpOrientation) + sizeof(*touch)); // + 2*sizeof(Position));
-      
+
     }
   }
 }

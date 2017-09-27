@@ -25,6 +25,9 @@
   CONSTANTS DECLARATIONS
 */
 
+
+#define USE_EXTERNAL_PHOTODIODES
+#define USE_FAST_MOTORS
 //#define USE_SIMULATOR
 /*        OPTICAL POSITIONING FRAME
 
@@ -68,6 +71,7 @@
 #define TYPE_UPDATE                           0x03
 #define TYPE_STATUS                           0x04
 #define TYPE_MOTORS_VELOCITY                  0x05
+#define TYPE_ROBOT_POSITION                     0x06
 
 //Configuration Messages
 #define TYPE_NEW_ROBOT                        0xF0
@@ -109,6 +113,12 @@
 /*
   MOTORS DECLARATIONS
 */
+
+#ifdef USE_FAST_MOTORS
+#define MAX_SPEED                               60
+#else
+#define MAX_SPEED                               100
+#endif
 
 #define MOTOR1_PIN				GPIO_PIN_0
 #define MOTOR1_GPIO_PORT			GPIOA
@@ -274,6 +284,38 @@
 /* Exported types ------------------------------------------------------------*/
 typedef uint8_t MotorDirection;
 typedef uint8_t bool;
+
+typedef struct {
+	uint16_t positionX;
+	uint16_t positionY;
+	uint8_t colorRed;
+	uint8_t colorGreen;
+	uint8_t colorBlue;
+	uint8_t preferredSpeed;
+	int16_t orientation;
+	bool isFinalGoal;
+	uint8_t empty;
+}PositionControlMessage;
+
+
+typedef struct
+{
+    int8_t motor1;
+    int8_t motor2;
+    float motorGain;
+    int8_t minVelocity;
+    int8_t preferredVelocity;
+    int8_t maxVelocity;
+    bool inverted;
+} Motor;
+
+typedef struct
+{
+  uint16_t x;
+  uint16_t y;
+  float angle;
+  bool finalGoal;
+} Target;
 
 typedef struct
 {

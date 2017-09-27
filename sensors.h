@@ -9,7 +9,7 @@
 
 
 /* Includes ------------------------------------------------------------------*/
-#include "config.h" 
+#include "config.h"
 #include "utilities.h"
 #include "qt1070.h"
 #include "lsm6ds3.h"
@@ -23,7 +23,8 @@ void readPhotoDiode(uint8_t photodiodeId);
 bool calculatePhotodiodePosition(uint8_t photodiodeId);
 bool updateRobotPosition();
 Position* getRobotPosition();
-float* getRobotOrientation();
+float* getRobotAngle();
+
 
 #ifdef __cplusplus
 }
