@@ -24,6 +24,7 @@ bool calibrate(Motor *motorValues)
     static float finalangle = 0.0f;
     static long initialy = 0.0f;
     static long finaly = 0.0f;
+    static bool inLoop = false;
     static Position initialPos = {0, 0};
     static Position initialPos2 = {0, 0};
     static int8_t velocity = 0;
@@ -45,18 +46,32 @@ bool calibrate(Motor *motorValues)
         break;
 
     case StartPosition: //Go to Start Position
+        
         if (CalibrationStatus != lastCalStatus)
         {
+            
             lastCalStatus = CalibrationStatus;
             reached = false;
         }
-
-        if (reached == false)
-            positionControl(200, 500, 0.0f, motorValues, &reached, false, true);
+        if (reached == false){
+          if(updateRobotPosition()){
+              positionControl(500, 500, 0.0f, motorValues, &reached, false, true, true);
+              minimumc(&(motorValues->motor1), motorValues->minVelocity);
+              minimumc(&(motorValues->motor2), motorValues->minVelocity);
+              maximumc(&(motorValues->motor1), motorValues->preferredVelocity);
+              maximumc(&(motorValues->motor2), motorValues->preferredVelocity);
+              setMotor1(motorValues->motor1);
+              setMotor2(motorValues->motor2 * motorValues->motorGain);
+          }
+           
+        }
         else
         {
+            setMotor1(0);
+            setMotor2(0);
             //positionControl(200, 500, motorValues, &reached, false);
-            CalibrationStatus = Orient;
+
+            CalibrationStatus = Orient;//Stop
         }
         break;
     /****  FIND MIN VELOCITY *****/
@@ -102,7 +117,6 @@ bool calibrate(Motor *motorValues)
         break;
 
     case FoundMinVel:
-        setBlueLed(5);
         if (CalibrationStatus != lastCalStatus)
         {
             lastCalStatus = CalibrationStatus;
@@ -111,12 +125,16 @@ bool calibrate(Motor *motorValues)
 
         if (HAL_GetTick() - TimerTime > 250)
         {
-            CalibrationStatus = CheckInverted;//Stop;
+
+            CalibrationStatus = OrientPrefVel; //Stop
             //CalibrationStatus = StartPosition;
         }
         break;
     /****  FIND MIN VELOCITY END *****/
+
+    
     /****  FIND LEFT RIGHT MOTORS *****/
+    /*
     case CheckInverted:
         if (CalibrationStatus != lastCalStatus && updateRobotPosition())
         {
@@ -153,35 +171,49 @@ bool calibrate(Motor *motorValues)
             CalibrationStatus = Stop;//Stop;
         }
         break;
+    */
     /****  FIND LEFT RIGHT MOTORS END *****/
+    
     /****  FIND PREFFERED VELOCITY *****/
     case OrientPrefVel:
         if (CalibrationStatus != lastCalStatus)
         {
-            lastCalStatus = CalibrationStatus;
-            aligned = false;
-            angleDesired = atan2f((500 - getRobotPosition()->y), (500 - getRobotPosition()->x)) * (180.0f / PI);
+            if(updateRobotPosition()){
+              lastCalStatus = CalibrationStatus;
+              aligned = false;
+              angleDesired = atan2f((500 - getRobotPosition()->y), (500 - getRobotPosition()->x)) * (180.0f / PI);
+            }
         }
 
-        if (aligned == false)
-            angleControl(angleDesired, motorValues, &aligned, true, 10.0f);
-
+        if (aligned == false){
+            if(updateRobotPosition()){
+              angleControl(angleDesired, motorValues, &aligned, true, 10.0f);
+              setMotor1(motorValues->motor1);
+              setMotor2(motorValues->motor2);
+            }
+        }
         else
             CalibrationStatus = SetMotorPrefVel;
         break;
     case SetMotorPrefVel:
-        if (CalibrationStatus != lastCalStatus)
-        {
-            lastCalStatus = CalibrationStatus;
-            TimerTime = HAL_GetTick();
-            initialPos2 = *getRobotPosition();
-        }
-        angleControl(angleDesired, motorValues, &aligned, true, 10.0f);
-        motorValues->motor1 += motorValues->preferredVelocity;
-        motorValues->motor2 += motorValues->preferredVelocity;
-        if (HAL_GetTick() - TimerTime > 300)
-        {
-            CalibrationStatus = IncreaseSpeedPrefVel;
+        if(updateRobotPosition()){
+          if (CalibrationStatus != lastCalStatus)
+          {
+          
+              lastCalStatus = CalibrationStatus;
+              TimerTime = HAL_GetTick();
+              initialPos2 = *getRobotPosition();
+
+          }
+          angleControl(angleDesired, motorValues, &aligned, true, 10.0f);
+          motorValues->motor1 += motorValues->preferredVelocity;
+          motorValues->motor2 += motorValues->preferredVelocity;
+          setMotor1(motorValues->preferredVelocity);
+          setMotor2(motorValues->preferredVelocity);
+          if (HAL_GetTick() - TimerTime > 300)
+          {
+              CalibrationStatus = IncreaseSpeedPrefVel;
+          }
         }
         break;
     case IncreaseSpeedPrefVel:
@@ -194,20 +226,25 @@ bool calibrate(Motor *motorValues)
         }
         if (HAL_GetTick() - TimerTime > 100)
         {
-            float distance2 = sqrtf((float)((getRobotPosition()->x - initialPos2.x) * (getRobotPosition()->x - initialPos2.x)) * powf((.8128) / (953.0f - 70.0f), 2) +
-                                    (float)((getRobotPosition()->y - initialPos2.y) * (getRobotPosition()->y - initialPos2.y)) * powf((0.508) / (790.0f - 232.0f), 2));
+            if(updateRobotPosition()){
+              float distance2 = sqrtf((float)((getRobotPosition()->x - initialPos2.x) * (getRobotPosition()->x - initialPos2.x)) * powf((.8128) / (953.0f - 70.0f), 2) +
+                                      (float)((getRobotPosition()->y - initialPos2.y) * (getRobotPosition()->y - initialPos2.y)) * powf((0.508) / (790.0f - 232.0f), 2));
 
-            if (distance2 > 0.11f)
-                CalibrationStatus = FoundPrefVel;
-            else
-            {
-                CalibrationStatus = OrientPrefVel;
-                motorValues->preferredVelocity = motorValues->preferredVelocity + 1;
+              if (distance2 > 0.11f){
+                  CalibrationStatus = FoundPrefVel;
+
+              }
+              else
+              {
+                  CalibrationStatus = OrientPrefVel;
+                  motorValues->preferredVelocity = motorValues->preferredVelocity + 1;
+              }
             }
         }
 
         break;
     case FoundPrefVel:
+        
         if (CalibrationStatus != lastCalStatus)
         {
             lastCalStatus = CalibrationStatus;
@@ -216,7 +253,7 @@ bool calibrate(Motor *motorValues)
 
         if (HAL_GetTick() - TimerTime > 250)
         {
-            CalibrationStatus = Stop; //StartPosition;
+            CalibrationStatus = Stop;//StartPosition;
         }
         break;
     /****  FIND PREFFERED VELOCITY END *****/
@@ -229,41 +266,61 @@ bool calibrate(Motor *motorValues)
             angleDesired = 0;
         }
 
-        if (aligned == false)
+        if (aligned == false){
+          if(updateRobotPosition()){
             angleControl(angleDesired, motorValues, &aligned, true, 10.0f);
-        else
+            setMotor1(motorValues->motor1);
+            setMotor2(motorValues->motor2);
+          }
+        }
+        else{
             CalibrationStatus = GoStraight;
+        }
 
         break;
 
     case GoStraight: //Let it go
+        
         if (CalibrationStatus != lastCalStatus)
         {
-            TimerTime = HAL_GetTick();
-            lastCalStatus = CalibrationStatus;
-            motorValues->preferredVelocity = 40;
-            //motorValues->maxVelocity = 100;
+           if(updateRobotPosition()){
+              initialangle = *getRobotAngle();
+              initialy = getRobotPosition()->y;
+
+              TimerTime = HAL_GetTick();
+              lastCalStatus = CalibrationStatus;
+              inLoop = true;
+              //motorValues->preferredVelocity = 40;
+              //motorValues->maxVelocity = 100;
+           }
         }
-        increaseVelocity(&velocity,motorValues,1);
-        motorValues->motor1 = velocity;
-        motorValues->motor2 = velocity;
-//positionControl(900,500,0,motorValues, &reached, true, true);
-        if (HAL_GetTick() - TimerTime > 1000)
+        //increaseVelocity(&velocity,motorValues,1);
+        motorValues->motor1 = motorValues->preferredVelocity;//velocity;
+        motorValues->motor2 = (motorValues->preferredVelocity *(motorValues->motorGain));//velocity;
+        setMotor1(motorValues->motor1);
+        setMotor2(motorValues->motor2);
+        //positionControl(900,500,0,motorValues, &reached, true, true);
+        if (HAL_GetTick() - TimerTime > 500 && inLoop) //1000
         {
-            CalibrationStatus = Stop;//StopBeforeAdjust;
+            inLoop = false;
+            CalibrationStatus = StopBeforeAdjust;//Stop;
         }
         break;
 
     case StopBeforeAdjust:
         if (CalibrationStatus != lastCalStatus)
         {
+            
             motorValues->motor1 = 0;
             motorValues->motor2 = 0;
+            setMotor1(motorValues->motor1);
+            setMotor2(motorValues->motor2);
             TimerTime = HAL_GetTick();
             lastCalStatus = CalibrationStatus;
         }
-        if (HAL_GetTick() - TimerTime > 500)
-            CalibrationStatus = Adjust;
+        if (HAL_GetTick() - TimerTime > 500){
+            CalibrationStatus = Adjust; //Stop;
+        }
         break;
 
     case Adjust:
@@ -271,26 +328,32 @@ bool calibrate(Motor *motorValues)
         {
             lastCalStatus = CalibrationStatus;
         }
-        finalangle = *getRobotAngle();
-        finaly = getRobotPosition()->y;
-        increment = 0.05f;
-        //if (abs(finalangle - initialangle) > 10.0f)
-        if (abs(finaly - initialy) > 10)
-        {
-            //if (finalangle > initialangle)
-            if (finaly > initialy)
-            {
-                motorValues->motorGain += increment;
-            }
-            else
-            {
-                motorValues->motorGain -= increment;
-            }
-            CalibrationStatus = StartPosition;
-        }
-        else
-        {
-            CalibrationStatus = OrientPrefVel;
+        
+        if(updateRobotPosition()){
+          
+          finalangle = *getRobotAngle();
+          finaly = getRobotPosition()->y;
+          increment = 0.05f;
+          if (abs(finalangle - initialangle) > 10.0f)
+          //if (abs(finaly - initialy) > 20)//10)
+          {
+              if (finalangle > initialangle)
+              //if (finaly > initialy)
+              {
+                  motorValues->motorGain += increment;
+              }
+              else
+              {
+                  motorValues->motorGain -= increment;
+              }
+              CalibrationStatus = StartPosition;
+          }
+          else
+          {
+              CalibrationStatus = Stop;//OrientPrefVel;
+              setBlueLed(5);
+             
+          }
         }
 
         break;
@@ -460,6 +523,7 @@ void angleControl(float angle_desired, Motor *motorValue, bool *aligned, bool fo
     if (alignCounter > 10)
     {
         *aligned = true;
+
         alignCounter = 0;
         iTerm = 0;
     }
@@ -491,7 +555,7 @@ Output  :   It will replace the motorvalues with the calculated ones
 Return	:   none
 Notes   :
 ============================================================================*/
-void positionControl(int xTarget, int yTarget, float finalAngle, Motor *motorValues, bool *reached, bool forward, bool finalGoal)
+void positionControl(int xTarget, int yTarget, float finalAngle, Motor *motorValues, bool *reached, bool forward, bool finalGoal, bool ignoreOrientation)
 {
     float ratioOfAngle = 0.75f;
     float distanceThreshold = 0.01f;
@@ -521,9 +585,9 @@ void positionControl(int xTarget, int yTarget, float finalAngle, Motor *motorVal
     float dTerm = abs((distance2 - lastDistance) / (0.01367f));
     float iTerm = abs((distance2 + lastDistance) / 2 * (0.01367f));
 
-    float PGain = 0.01f;
-    float DGain = 0.01f;
-    float IGain = 0.001f;
+    float PGain = 0.001f;
+    float DGain = 0.0001f;
+    float IGain = 0.0001f;
 
     if (distance2 > distanceThreshold)
     {
@@ -573,14 +637,21 @@ void positionControl(int xTarget, int yTarget, float finalAngle, Motor *motorVal
     }
     else if (distance2 <= distanceThreshold && finalGoal == true)
     {
-        if (aligned2 == false)
-            angleControl(finalAngle, motorValues, &aligned2, false, 5.0f);
-        else
-        {
-            motorValues->motor1 = 0;
-            motorValues->motor2 = 0;
-            angleControl(finalAngle, motorValues, &aligned2, false, 5.0f);
-            *reached = true;
+        //Ignore desired angle
+        if(ignoreOrientation){
+          *reached = true;
+        }
+        else{
+          if (aligned2 == false)
+              angleControl(finalAngle, motorValues, &aligned2, false, 5.0f);
+          else
+          {
+            
+              motorValues->motor1 = 0;
+              motorValues->motor2 = 0;
+              angleControl(finalAngle, motorValues, &aligned2, false, 5.0f);
+              *reached = true;
+          }
         }
     }
     lastDistance = distance2;
@@ -807,7 +878,6 @@ void myFunction(int targetX, int targetY, Motor* motorValue, bool* aligned){
   }
 
   if(abs(targetAngle - *getRobotAngle()) < 5.0f){
-    setRedLed(5);
     motorValue->motor1 = 0;
     motorValue->motor2 = 0;
     *aligned = true;

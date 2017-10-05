@@ -15,14 +15,14 @@
 /* Interrupt flags */
 volatile bool touchChanged = false;
 volatile bool radioEvent = false;
+volatile bool reached = false;
 bool positionSent = true;
 uint8_t currentTouch = 0;
 bool isAddressValid = false;
-Target currentGoal = {500, 500, 0, 1};
+Target currentGoal = {500, 500, 0, true, true};
 //motor motorValues = {0, 0, 1.0f, 22, MAX_SPEED, 60};
-Motor motorValues = {0, 0, 1.0f, 20, 30, 35, false};
+Motor motorValues = {0, 0, 1.0f, 15, 30,60};
 bool isPositionControl = true;
-volatile bool aligned = false;
 float targetAngle = 0.0f;
 volatile CHARGING_STATE_t chargingStatus = DISCONNECTED;
 
@@ -55,6 +55,7 @@ void initRobot() {
 
   initPhotoDiodes();
 
+  //Avoid calibration for now
   //while(calibrate(&motorValues) == false);
   chargingStatus = (HAL_GPIO_ReadPin(CHARGING_STATUS_GPIO_PORT, CHARGING_STATUS_PIN) == LOW) ? CHARGING : CHARGED;
 }
@@ -70,24 +71,26 @@ Return	:
 Notes   :
 ============================================================================*/
 void updateRobot() {
-  bool reached = false;
   
-
   if (updateRobotPosition()) {
-    /*if(!aligned){
-      myFunction(0,0, &motorValues, &aligned);
-    }*/
     prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
     if (isPositionControl)
     {
-      positionControl(currentGoal.x, currentGoal.y, currentGoal.angle, &motorValues, &reached, false, currentGoal.finalGoal);
-      minimumc(&motorValues.motor1, motorValues.minVelocity);
-      minimumc(&motorValues.motor2, motorValues.minVelocity);
-      maximumc(&motorValues.motor1, motorValues.maxVelocity);
-      maximumc(&motorValues.motor2, motorValues.maxVelocity);
+      if(reached){
+        setRedLed(5);
+        setMotor1(0);
+        setMotor2(0);
+      }
+      else{
+        positionControl(currentGoal.x, currentGoal.y, currentGoal.angle, &motorValues, &reached, false, currentGoal.finalGoal, currentGoal.ignoreOrientation);
+        minimumc(&motorValues.motor1, motorValues.minVelocity);
+        minimumc(&motorValues.motor2, motorValues.minVelocity);
+        maximumc(&motorValues.motor1, motorValues.preferredVelocity);
+        maximumc(&motorValues.motor2, motorValues.preferredVelocity);
 
-      setMotor1(motorValues.motor1);
-      setMotor2(motorValues.motor2);// * motorValues.motorGain);
+        setMotor1(motorValues.motor1);
+        setMotor2(motorValues.motor2 * motorValues.motorGain);
+      }
     }
   }
   if(isBlinded())
@@ -170,33 +173,36 @@ void handleIncomingRadioMessage() {
         prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
         break;
       case TYPE_ROBOT_POSITION:
-        setGreenLed(5);
         isPositionControl = true;
         positionMessage = (PositionControlMessage*)msg.payload;
-        currentGoal.x = positionMessage->positionX;
-        currentGoal.y = positionMessage->positionY;
+        if(currentGoal.x != positionMessage->positionX || currentGoal.y != positionMessage->positionY){
+          currentGoal.x = positionMessage->positionX;
+          currentGoal.y = positionMessage->positionY;
+          reached = false;
+        }
         //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
-        /*currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
-
         motorValues.preferredVelocity = positionMessage->preferredSpeed;
+        
+        currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
+        currentGoal.ignoreOrientation = positionMessage->ignoreOrientation;
+
         if(motorValues.preferredVelocity > MAX_SPEED)
           motorValues.preferredVelocity = MAX_SPEED;
         if(motorValues.preferredVelocity < -MAX_SPEED)
-          motorValues.preferredVelocity = -MAX_SPEED;*/
+          motorValues.preferredVelocity = -MAX_SPEED;
         currentGoal.finalGoal = (bool)positionMessage->isFinalGoal;
         prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
         break;      
       case TYPE_NEW_ROBOT:
         if (!isAddressValid) {
-
+          setRedLed(0);
+          setGreenLed(0);
+          setBlueLed(5);
           setRobotId(msg.payload[0]);
           memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
           setRobotPipeAddress(tmpPipeAddress);
-
           openCommunication();
-
           startListening();
-          setBlueLed(5);
           if (DEBUG_ENABLED())
             debug_printf("Info received, id=%d | address=0x%x\n", getRobotId(), getRobotPipeAddress());
           isAddressValid = true;
@@ -233,7 +239,6 @@ void prepareMessageToSend(Position *position, float *orientation, uint8_t *touch
 
   if (isAddressValid) {
     if (position && orientation && touch) {
-      setRedLed(5);
       tmpOrientation = (int16_t)(*orientation * 100.0f);
 
       memcpy_fast(msg.payload, (uint8_t *)position, sizeof(*position));

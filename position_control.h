@@ -39,7 +39,7 @@
 
 bool calibrate(Motor* motorValues);
 void angleControl(float angle_desired, Motor* motorValue, bool* aligned, bool forward, float angleThreshold);
-void positionControl(int xTarget, int yTarget, float finalAngle, Motor* motorValues, bool* reached, bool forward, bool finalGoal);
+void positionControl(int xTarget, int yTarget, float finalAngle, Motor* motorValues, bool* reached, bool forward, bool finalGoal, bool ignoreOrientation);
 void maximum(int* value, int max);
 void minimum(int* value, int min);
 void minimumf(float* value, float min);

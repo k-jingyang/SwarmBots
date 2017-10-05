@@ -286,7 +286,6 @@ bool updateRobotPosition()
         readyToUpdate0 = false;
         readyToUpdate1 = false;
         blinded = false;
-        setGreenLed(0);
         return true;
     }
     // no new position for a while then stop

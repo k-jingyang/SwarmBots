@@ -66,8 +66,8 @@ int main(void)
 {
     initRobot();
     setGreenLed(5);
-    //setMotor1(20);
-    //setMotor2(0);
+    //setMotor1(30);
+    //setMotor2(30);
     while (1)
     {
         checkRadio();

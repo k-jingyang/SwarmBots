@@ -295,6 +295,7 @@ typedef struct {
 	int16_t orientation;
 	bool isFinalGoal;
 	uint8_t empty;
+        bool ignoreOrientation;
 }PositionControlMessage;
 
 
@@ -306,7 +307,6 @@ typedef struct
     int8_t minVelocity;
     int8_t preferredVelocity;
     int8_t maxVelocity;
-    bool inverted;
 } Motor;
 
 typedef struct
@@ -315,6 +315,7 @@ typedef struct
   uint16_t y;
   float angle;
   bool finalGoal;
+  bool ignoreOrientation;
 } Target;
 
 typedef struct
