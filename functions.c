@@ -21,7 +21,7 @@ uint8_t currentTouch = 0;
 bool isAddressValid = false;
 Target currentGoal = {500, 500, 0, true, true};
 //motor motorValues = {0, 0, 1.0f, 22, MAX_SPEED, 60};
-Motor motorValues = {0, 0, 1.0f, 15, 30,60};
+Motor motorValues = {0, 0, 1.0f, 15, 35,60};
 bool isPositionControl = true;
 float targetAngle = 0.0f;
 volatile CHARGING_STATE_t chargingStatus = DISCONNECTED;
@@ -179,6 +179,7 @@ void handleIncomingRadioMessage() {
           currentGoal.x = positionMessage->positionX;
           currentGoal.y = positionMessage->positionY;
           reached = false;
+          setRedLed(0);
         }
         //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
         motorValues.preferredVelocity = positionMessage->preferredSpeed;

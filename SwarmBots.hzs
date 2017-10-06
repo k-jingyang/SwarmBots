@@ -66,15 +66,11 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="42" y="23" useTextEdit="1" useBinaryEdit="0" left="0" path="functions.c" debugPath="functions.c" selected="1" top="169" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="28" y="350" useTextEdit="1" useBinaryEdit="0" left="0" path="position_control.c" debugPath="position_control.c" selected="0" top="3" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="27" useTextEdit="1" useBinaryEdit="0" left="0" path="functions.h" debugPath="functions.h" selected="0" top="6" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" useBinaryEdit="0" left="0" path="position_control.h" debugPath="position_control.h" selected="0" top="22" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="26" useTextEdit="1" useBinaryEdit="0" left="0" path="sensors.h" debugPath="sensors.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="69" useTextEdit="1" useBinaryEdit="0" left="0" path="main.c" debugPath="main.c" selected="0" top="54" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="276" useTextEdit="1" useBinaryEdit="0" left="0" path="sensors.c" debugPath="sensors.c" selected="0" top="276" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="colors.h" debugPath="colors.h" selected="0" top="20" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="304" useTextEdit="1" useBinaryEdit="0" left="0" path="config.h" debugPath="config.h" selected="0" top="283" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="23" useTextEdit="1" useBinaryEdit="0" left="0" path="functions.c" debugPath="functions.c" selected="1" top="4" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="25" y="317" useTextEdit="1" useBinaryEdit="0" left="0" path="config.h" debugPath="config.h" selected="0" top="260" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="26" y="641" useTextEdit="1" useBinaryEdit="0" left="0" path="position_control.c" debugPath="position_control.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" useBinaryEdit="0" left="0" path="functions.h" debugPath="functions.h" selected="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="41" useTextEdit="1" useBinaryEdit="0" left="0" path="position_control.h" debugPath="position_control.h" selected="0" top="24" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="SwarmBots" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-LINK/V2" buildConfiguration="THUMB Release" debugSearchFileMap="/Users/Mathieu/Library/Rowley Associates Limited/CrossWorks for ARM/v3/packages/targets/CMSIS_3/CMSIS/Include/core_cm0.h&#xd;&#xa;&#xd;&#xa;C:/Users/Mathieu/Google Drive/Swarm Bots/MCU Code/Projects/SwarmBots v2/src/main.c&#xd;&#xa;" fileDialogInitialDirectory="C:/Users/Swarmbots/Dropbox/Swarm Bots/MCU Code/Projects/SwarmBots v2/inc" debugSearchPath="" autoConnectCapabilities="265599"/>
 </session>
