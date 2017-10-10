@@ -575,8 +575,10 @@ void positionControl(int xTarget, int yTarget, float finalAngle, Motor *motorVal
         justStarted = true;
     }
 
-    float distance2 = sqrtf((float)((xTarget - xNow) * (xTarget - xNow)) * powf((.8128) / (953.0f - 70.0f), 2) +
-                            (float)((yTarget - yNow) * (yTarget - yNow)) * powf((0.508) / (790.0f - 232.0f), 2));
+    float distance2 = sqrtf((float)((xTarget - xNow) * (xTarget - xNow)) * powf((.8128) / (750.0f - 300.0f), 2) +//(953.0f - 70.0f), 2) +
+                            (float)((yTarget - yNow) * (yTarget - yNow)) * powf((0.508) / (790.0f - 250.0f), 2)); //(790.0f - 232.0f), 2));
+
+
 
     //long distance2 = (xTarget - xNow)*(xTarget - xNow) + (yTarget - yNow) * (yTarget - yNow);
     static int8_t velocity = 0;

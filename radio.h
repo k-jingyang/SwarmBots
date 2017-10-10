@@ -15,7 +15,7 @@
 
 bool initRadio();
 void sendRadioMessage(Message *msg, uint8_t size);
-void sendAddressRequest();
+void sendAddressRequest(unsigned int seed, uint8_t* randomNumber);
 
 void resetCommunicationWatchdog();
 void tickCommunicationWatchdog(uint8_t millis);

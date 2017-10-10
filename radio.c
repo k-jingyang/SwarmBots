@@ -5,6 +5,7 @@
 bool isRadioInitialized = false;
 volatile uint32_t communicationWatchdog = 0;
 
+
 uint64_t myPipeAddress = DEFAULT_ADDRESS;
 uint8_t myId = 0;
 /*============================================================================
@@ -75,13 +76,19 @@ Output  :
 Return	:
 Notes   :
 ============================================================================*/
-void sendAddressRequest()
+void sendAddressRequest(unsigned int seed, uint8_t* randomNumber)
 {
+
+    if(*randomNumber == 0){
+       srand(seed);
+       *randomNumber = rand();
+    }
     setGreenLed(5);
     Message msg;
     msg.header.type = TYPE_NEW_ROBOT;
-
     msg.header.id = 255;
+
+    memcpy(&msg.payload, randomNumber, sizeof(uint16_t));
 
     openWritingPipe(DEFAULT_ADDRESS);
     openReadingPipe(0, DEFAULT_ADDRESS);
@@ -89,7 +96,7 @@ void sendAddressRequest()
     resetCommunicationWatchdog();
 
     stopListening();
-    sendRadioMessage(&msg, sizeof(Header));
+    sendRadioMessage(&msg, sizeof(Header)+sizeof(uint16_t));
     HAL_Delay(1);
     startListening();
 

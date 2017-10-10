@@ -1646,10 +1646,6 @@ Discarded input sections
                 0x0000000000000000       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_to_uint64
                 0x0000000000000000       0x4c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float32_to_float64
-                0x0000000000000000       0x44 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_to_float32
-                0x0000000000000000       0x64 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float32_cmp
                 0x0000000000000000       0x38 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__aeabi_cfcmpeq
@@ -1660,12 +1656,6 @@ Discarded input sections
                 0x0000000000000000       0x18 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float32_cmpun
                 0x0000000000000000       0x20 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_add
-                0x0000000000000000      0x1dc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_mul
-                0x0000000000000000      0x18c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_div
-                0x0000000000000000       0xc4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cmp
                 0x0000000000000000       0x6c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cdcmpeq
@@ -1674,14 +1664,10 @@ Discarded input sections
                 0x0000000000000000       0x10 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cdrcmple
                 0x0000000000000000       0x1c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_cmpeq
-                0x0000000000000000       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cmple
                 0x0000000000000000       0x44 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cmpge
                 0x0000000000000000       0x44 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .text.libc.__float64_cmplt
-                0x0000000000000000       0x40 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cmpgt
                 0x0000000000000000       0x40 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
  .text.libc.__float64_cmpun
@@ -1755,10 +1741,6 @@ Discarded input sections
                 0x0000000000000000       0x1c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.fminf
                 0x0000000000000000       0x14 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
- .text.libc.frexp
-                0x0000000000000000       0x50 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
- .text.libc.ldexp
-                0x0000000000000000       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.exp
                 0x0000000000000000      0x1b8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.cosh
@@ -1799,8 +1781,6 @@ Discarded input sections
                 0x0000000000000000      0x1b4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.tanhf
                 0x0000000000000000      0x130 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
- .text.libc.sqrt
-                0x0000000000000000      0x100 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.__RAL_asinacos
                 0x0000000000000000      0x2ac C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .text.libc.acosh
@@ -2184,16 +2164,12 @@ Discarded input sections
                 0x0000000000000000       0x34 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.qsort
                 0x0000000000000000      0x23a C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
- .text.libc.rand
-                0x0000000000000000       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.scanf
                 0x0000000000000000       0x44 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.snprintf
                 0x0000000000000000       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.sprintf
                 0x0000000000000000       0x28 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
- .text.libc.srand
-                0x0000000000000000        0xc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.sscanf
                 0x0000000000000000       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .text.libc.strcasecmp
@@ -2922,8 +2898,6 @@ Discarded input sections
                 0x0000000000000000        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .data.libc.__RAL_global_locale
                 0x0000000000000000       0x14 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
- .data.libc.__RAL_rand_next
-                0x0000000000000000        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .data.libc.__ungot
                 0x0000000000000000        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
  .data.libc.heap
@@ -3688,7 +3662,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ >= __FLASH_segment_start__) && (__init_rodata_end__ <= __FLASH_segment_end__))), error: .init_rodata is too large to fit in FLASH memory segment)
                 0x0000000008000270                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x0000000008000270     0x5bf8
+.text           0x0000000008000270     0x63f0
                 0x0000000008000270                __text_start__ = .
  *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x0000000008000270        0x0 linker stubs
@@ -3810,614 +3784,667 @@ Linker script and memory map
                 0x0000000008000b88       0x50 SwarmBots THUMB Release/functions.o
                 0x0000000008000b88                initRobot
  .text.prepareMessageToSend
-                0x0000000008000bd8       0x7c SwarmBots THUMB Release/functions.o
+                0x0000000008000bd8       0x84 SwarmBots THUMB Release/functions.o
                 0x0000000008000bd8                prepareMessageToSend
  .text.updateRobot
-                0x0000000008000c54       0xe0 SwarmBots THUMB Release/functions.o
-                0x0000000008000c54                updateRobot
+                0x0000000008000c5c      0x138 SwarmBots THUMB Release/functions.o
+                0x0000000008000c5c                updateRobot
  .text.handleIncomingRadioMessage
-                0x0000000008000d34      0x190 SwarmBots THUMB Release/functions.o
-                0x0000000008000d34                handleIncomingRadioMessage
+                0x0000000008000d94      0x1a8 SwarmBots THUMB Release/functions.o
+                0x0000000008000d94                handleIncomingRadioMessage
  .text.checkRadio
-                0x0000000008000ec4       0x6c SwarmBots THUMB Release/functions.o
-                0x0000000008000ec4                checkRadio
+                0x0000000008000f3c       0x98 SwarmBots THUMB Release/functions.o
+                0x0000000008000f3c                checkRadio
  .text.switchToChargingMode
-                0x0000000008000f30       0x3c SwarmBots THUMB Release/functions.o
-                0x0000000008000f30                switchToChargingMode
+                0x0000000008000fd4       0x3c SwarmBots THUMB Release/functions.o
+                0x0000000008000fd4                switchToChargingMode
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008000f6c       0x68 SwarmBots THUMB Release/functions.o
-                0x0000000008000f6c                HAL_GPIO_EXTI_Callback
+                0x0000000008001010       0x68 SwarmBots THUMB Release/functions.o
+                0x0000000008001010                HAL_GPIO_EXTI_Callback
  .text.getIMUDeviceID
-                0x0000000008000fd4       0x20 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008000fd4                getIMUDeviceID
+                0x0000000008001078       0x20 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001078                getIMUDeviceID
  .text.resetIMU
-                0x0000000008000ff4       0x28 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008000ff4                resetIMU
+                0x0000000008001098       0x28 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001098                resetIMU
  .text.getRawRotation
-                0x000000000800101c       0x48 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000000800101c                getRawRotation
+                0x00000000080010c0       0x48 SwarmBots THUMB Release/lsm6ds3.o
+                0x00000000080010c0                getRawRotation
  .text.calibrateLSM6DS3
-                0x0000000008001064       0x9c SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001064                calibrateLSM6DS3
+                0x0000000008001108       0x9c SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001108                calibrateLSM6DS3
  .text.setAccelRange
-                0x0000000008001100       0x40 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001100                setAccelRange
+                0x00000000080011a4       0x40 SwarmBots THUMB Release/lsm6ds3.o
+                0x00000000080011a4                setAccelRange
  .text.setAccelBW
-                0x0000000008001140       0x40 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001140                setAccelBW
+                0x00000000080011e4       0x40 SwarmBots THUMB Release/lsm6ds3.o
+                0x00000000080011e4                setAccelBW
  .text.setAccelODR
-                0x0000000008001180       0x40 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001180                setAccelODR
+                0x0000000008001224       0x40 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001224                setAccelODR
  .text.initAccel
-                0x00000000080011c0       0x20 SwarmBots THUMB Release/lsm6ds3.o
-                0x00000000080011c0                initAccel
+                0x0000000008001264       0x20 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001264                initAccel
  .text.setGyroODR
-                0x00000000080011e0       0x40 SwarmBots THUMB Release/lsm6ds3.o
-                0x00000000080011e0                setGyroODR
+                0x0000000008001284       0x40 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001284                setGyroODR
  .text.setGyroRange
-                0x0000000008001220       0x40 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001220                setGyroRange
+                0x00000000080012c4       0x40 SwarmBots THUMB Release/lsm6ds3.o
+                0x00000000080012c4                setGyroRange
  .text.initGyro
-                0x0000000008001260       0x1c SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000008001260                initGyro
- .text.initIMU  0x000000000800127c       0x78 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000000800127c                initIMU
+                0x0000000008001304       0x1c SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001304                initGyro
+ .text.initIMU  0x0000000008001320       0x78 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000008001320                initIMU
  .text.write_payload
-                0x00000000080012f4       0x16 SwarmBots THUMB Release/RF24.o
-                0x00000000080012f4                write_payload
+                0x0000000008001398       0x16 SwarmBots THUMB Release/RF24.o
+                0x0000000008001398                write_payload
  .text.read_payload
-                0x000000000800130a       0x3c SwarmBots THUMB Release/RF24.o
-                0x000000000800130a                read_payload
+                0x00000000080013ae       0x3c SwarmBots THUMB Release/RF24.o
+                0x00000000080013ae                read_payload
  .text.readRadio
-                0x0000000008001346       0x10 SwarmBots THUMB Release/RF24.o
-                0x0000000008001346                readRadio
+                0x00000000080013ea       0x10 SwarmBots THUMB Release/RF24.o
+                0x00000000080013ea                readRadio
  .text.getDynamicPayloadSize
-                0x0000000008001356       0x1a SwarmBots THUMB Release/RF24.o
-                0x0000000008001356                getDynamicPayloadSize
+                0x00000000080013fa       0x1a SwarmBots THUMB Release/RF24.o
+                0x00000000080013fa                getDynamicPayloadSize
  .text.toggle_features
-                0x0000000008001370        0xc SwarmBots THUMB Release/RF24.o
-                0x0000000008001370                toggle_features
+                0x0000000008001414        0xc SwarmBots THUMB Release/RF24.o
+                0x0000000008001414                toggle_features
  .text.flush_rx
-                0x000000000800137c        0xc SwarmBots THUMB Release/RF24.o
-                0x000000000800137c                flush_rx
+                0x0000000008001420        0xc SwarmBots THUMB Release/RF24.o
+                0x0000000008001420                flush_rx
  .text.flush_tx
-                0x0000000008001388        0xc SwarmBots THUMB Release/RF24.o
-                0x0000000008001388                flush_tx
+                0x000000000800142c        0xc SwarmBots THUMB Release/RF24.o
+                0x000000000800142c                flush_tx
  .text.get_status
-                0x0000000008001394        0xc SwarmBots THUMB Release/RF24.o
-                0x0000000008001394                get_status
+                0x0000000008001438        0xc SwarmBots THUMB Release/RF24.o
+                0x0000000008001438                get_status
  .text.whatHappened
-                0x00000000080013a0       0x22 SwarmBots THUMB Release/RF24.o
-                0x00000000080013a0                whatHappened
- .text.csn      0x00000000080013c2       0x10 SwarmBots THUMB Release/RF24.o
-                0x00000000080013c2                csn
+                0x0000000008001444       0x22 SwarmBots THUMB Release/RF24.o
+                0x0000000008001444                whatHappened
+ .text.csn      0x0000000008001466       0x10 SwarmBots THUMB Release/RF24.o
+                0x0000000008001466                csn
  .text.writeAckPayload
-                0x00000000080013d2       0x36 SwarmBots THUMB Release/RF24.o
-                0x00000000080013d2                writeAckPayload
- .text.ce       0x0000000008001408       0x14 SwarmBots THUMB Release/RF24.o
-                0x0000000008001408                ce
+                0x0000000008001476       0x36 SwarmBots THUMB Release/RF24.o
+                0x0000000008001476                writeAckPayload
+ .text.ce       0x00000000080014ac       0x14 SwarmBots THUMB Release/RF24.o
+                0x00000000080014ac                ce
  .text.stopListening
-                0x000000000800141c       0x28 SwarmBots THUMB Release/RF24.o
-                0x000000000800141c                stopListening
+                0x00000000080014c0       0x28 SwarmBots THUMB Release/RF24.o
+                0x00000000080014c0                stopListening
  .text.readRadioRegister
-                0x0000000008001444       0x1c SwarmBots THUMB Release/RF24.o
-                0x0000000008001444                readRadioRegister
+                0x00000000080014e8       0x1c SwarmBots THUMB Release/RF24.o
+                0x00000000080014e8                readRadioRegister
  .text.writeRadioRegisters
-                0x0000000008001460       0x18 SwarmBots THUMB Release/RF24.o
-                0x0000000008001460                writeRadioRegisters
+                0x0000000008001504       0x18 SwarmBots THUMB Release/RF24.o
+                0x0000000008001504                writeRadioRegisters
  .text.openWritingPipe
-                0x0000000008001478       0x16 SwarmBots THUMB Release/RF24.o
-                0x0000000008001478                openWritingPipe
- *fill*         0x000000000800148e        0x2 
+                0x000000000800151c       0x16 SwarmBots THUMB Release/RF24.o
+                0x000000000800151c                openWritingPipe
+ *fill*         0x0000000008001532        0x2 
  .text.openReadingPipe
-                0x0000000008001490       0x40 SwarmBots THUMB Release/RF24.o
-                0x0000000008001490                openReadingPipe
+                0x0000000008001534       0x40 SwarmBots THUMB Release/RF24.o
+                0x0000000008001534                openReadingPipe
  .text.writeRadioRegister
-                0x00000000080014d0       0x12 SwarmBots THUMB Release/RF24.o
-                0x00000000080014d0                writeRadioRegister
+                0x0000000008001574       0x12 SwarmBots THUMB Release/RF24.o
+                0x0000000008001574                writeRadioRegister
  .text.powerDown
-                0x00000000080014e2       0x24 SwarmBots THUMB Release/RF24.o
-                0x00000000080014e2                powerDown
- .text.powerUp  0x0000000008001506       0x26 SwarmBots THUMB Release/RF24.o
-                0x0000000008001506                powerUp
+                0x0000000008001586       0x24 SwarmBots THUMB Release/RF24.o
+                0x0000000008001586                powerDown
+ .text.powerUp  0x00000000080015aa       0x26 SwarmBots THUMB Release/RF24.o
+                0x00000000080015aa                powerUp
  .text.enableDynamicPayloads
-                0x000000000800152c       0x54 SwarmBots THUMB Release/RF24.o
-                0x000000000800152c                enableDynamicPayloads
+                0x00000000080015d0       0x54 SwarmBots THUMB Release/RF24.o
+                0x00000000080015d0                enableDynamicPayloads
  .text.enableAckPayload
-                0x0000000008001580       0x6c SwarmBots THUMB Release/RF24.o
-                0x0000000008001580                enableAckPayload
+                0x0000000008001624       0x6c SwarmBots THUMB Release/RF24.o
+                0x0000000008001624                enableAckPayload
  .text.setAutoAck
-                0x00000000080015ec       0x24 SwarmBots THUMB Release/RF24.o
-                0x00000000080015ec                setAutoAck
+                0x0000000008001690       0x24 SwarmBots THUMB Release/RF24.o
+                0x0000000008001690                setAutoAck
  .text.setPALevel
-                0x0000000008001610       0x4c SwarmBots THUMB Release/RF24.o
-                0x0000000008001610                setPALevel
+                0x00000000080016b4       0x4c SwarmBots THUMB Release/RF24.o
+                0x00000000080016b4                setPALevel
  .text.setDataRate
-                0x000000000800165c       0x54 SwarmBots THUMB Release/RF24.o
-                0x000000000800165c                setDataRate
+                0x0000000008001700       0x54 SwarmBots THUMB Release/RF24.o
+                0x0000000008001700                setDataRate
  .text.setCRCLength
-                0x00000000080016b0       0x38 SwarmBots THUMB Release/RF24.o
-                0x00000000080016b0                setCRCLength
+                0x0000000008001754       0x38 SwarmBots THUMB Release/RF24.o
+                0x0000000008001754                setCRCLength
  .text.setRetries
-                0x00000000080016e8       0x24 SwarmBots THUMB Release/RF24.o
-                0x00000000080016e8                setRetries
+                0x000000000800178c       0x24 SwarmBots THUMB Release/RF24.o
+                0x000000000800178c                setRetries
  .text.clearInterruptFlag
-                0x000000000800170c       0x22 SwarmBots THUMB Release/RF24.o
-                0x000000000800170c                clearInterruptFlag
+                0x00000000080017b0       0x22 SwarmBots THUMB Release/RF24.o
+                0x00000000080017b0                clearInterruptFlag
  .text.setInterruptSource
-                0x000000000800172e       0x52 SwarmBots THUMB Release/RF24.o
-                0x000000000800172e                setInterruptSource
+                0x00000000080017d2       0x52 SwarmBots THUMB Release/RF24.o
+                0x00000000080017d2                setInterruptSource
  .text.setChannel
-                0x0000000008001780       0x24 SwarmBots THUMB Release/RF24.o
-                0x0000000008001780                setChannel
+                0x0000000008001824       0x24 SwarmBots THUMB Release/RF24.o
+                0x0000000008001824                setChannel
  .text.initNRF24L01P
-                0x00000000080017a4       0xe4 SwarmBots THUMB Release/RF24.o
-                0x00000000080017a4                initNRF24L01P
+                0x0000000008001848       0xe4 SwarmBots THUMB Release/RF24.o
+                0x0000000008001848                initNRF24L01P
  .text.startWrite
-                0x0000000008001888       0x4c SwarmBots THUMB Release/RF24.o
-                0x0000000008001888                startWrite
+                0x000000000800192c       0x4c SwarmBots THUMB Release/RF24.o
+                0x000000000800192c                startWrite
  .text.writeRadio
-                0x00000000080018d4       0x68 SwarmBots THUMB Release/RF24.o
-                0x00000000080018d4                writeRadio
+                0x0000000008001978       0x68 SwarmBots THUMB Release/RF24.o
+                0x0000000008001978                writeRadio
  .text.startListening
-                0x000000000800193c       0x60 SwarmBots THUMB Release/RF24.o
-                0x000000000800193c                startListening
+                0x00000000080019e0       0x60 SwarmBots THUMB Release/RF24.o
+                0x00000000080019e0                startListening
  .text.RingBuffer_init
-                0x000000000800199c        0xe SwarmBots THUMB Release/RingBuffer.o
-                0x000000000800199c                RingBuffer_init
+                0x0000000008001a40        0xe SwarmBots THUMB Release/RingBuffer.o
+                0x0000000008001a40                RingBuffer_init
  .text.RingBuffer_pop
-                0x00000000080019aa       0x22 SwarmBots THUMB Release/RingBuffer.o
-                0x00000000080019aa                RingBuffer_pop
+                0x0000000008001a4e       0x22 SwarmBots THUMB Release/RingBuffer.o
+                0x0000000008001a4e                RingBuffer_pop
  .text.RingBuffer_get
-                0x00000000080019cc       0x18 SwarmBots THUMB Release/RingBuffer.o
-                0x00000000080019cc                RingBuffer_get
+                0x0000000008001a70       0x18 SwarmBots THUMB Release/RingBuffer.o
+                0x0000000008001a70                RingBuffer_get
  .text.RingBuffer_push
-                0x00000000080019e4       0x18 SwarmBots THUMB Release/RingBuffer.o
-                0x00000000080019e4                RingBuffer_push
+                0x0000000008001a88       0x18 SwarmBots THUMB Release/RingBuffer.o
+                0x0000000008001a88                RingBuffer_push
  .text.RingBuffer_erase
-                0x00000000080019fc       0x18 SwarmBots THUMB Release/RingBuffer.o
-                0x00000000080019fc                RingBuffer_erase
+                0x0000000008001aa0       0x18 SwarmBots THUMB Release/RingBuffer.o
+                0x0000000008001aa0                RingBuffer_erase
  .text.setRGBLed
-                0x0000000008001a14       0x64 SwarmBots THUMB Release/led.o
-                0x0000000008001a14                setRGBLed
+                0x0000000008001ab8       0x64 SwarmBots THUMB Release/led.o
+                0x0000000008001ab8                setRGBLed
  .text.initRGBLed
-                0x0000000008001a78      0x148 SwarmBots THUMB Release/led.o
-                0x0000000008001a78                initRGBLed
+                0x0000000008001b1c      0x148 SwarmBots THUMB Release/led.o
+                0x0000000008001b1c                initRGBLed
  .text.setRedLedRaw
-                0x0000000008001bc0       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001bc0                setRedLedRaw
+                0x0000000008001c64       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001c64                setRedLedRaw
  .text.glowRedLed
-                0x0000000008001be4       0x70 SwarmBots THUMB Release/led.o
-                0x0000000008001be4                glowRedLed
+                0x0000000008001c88       0x70 SwarmBots THUMB Release/led.o
+                0x0000000008001c88                glowRedLed
  .text.toggleRedLed
-                0x0000000008001c54       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001c54                toggleRedLed
+                0x0000000008001cf8       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001cf8                toggleRedLed
  .text.setRedLed
-                0x0000000008001c78       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001c78                setRedLed
+                0x0000000008001d1c       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001d1c                setRedLed
  .text.setGreenLedRaw
-                0x0000000008001c9c       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001c9c                setGreenLedRaw
+                0x0000000008001d40       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001d40                setGreenLedRaw
  .text.setGreenLed
-                0x0000000008001cc0       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001cc0                setGreenLed
+                0x0000000008001d64       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001d64                setGreenLed
  .text.setBlueLedRaw
-                0x0000000008001ce4       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001ce4                setBlueLedRaw
+                0x0000000008001d88       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001d88                setBlueLedRaw
  .text.setBlueLed
-                0x0000000008001d08       0x24 SwarmBots THUMB Release/led.o
-                0x0000000008001d08                setBlueLed
+                0x0000000008001dac       0x24 SwarmBots THUMB Release/led.o
+                0x0000000008001dac                setBlueLed
  .text.initRadio
-                0x0000000008001d2c       0x7c SwarmBots THUMB Release/radio.o
-                0x0000000008001d2c                initRadio
+                0x0000000008001dd0       0x7c SwarmBots THUMB Release/radio.o
+                0x0000000008001dd0                initRadio
  .text.sendAddressRequest
-                0x0000000008001da8       0x5c SwarmBots THUMB Release/radio.o
-                0x0000000008001da8                sendAddressRequest
+                0x0000000008001e4c       0x7c SwarmBots THUMB Release/radio.o
+                0x0000000008001e4c                sendAddressRequest
  .text.tickCommunicationWatchdog
-                0x0000000008001e04       0x20 SwarmBots THUMB Release/radio.o
-                0x0000000008001e04                tickCommunicationWatchdog
+                0x0000000008001ec8       0x20 SwarmBots THUMB Release/radio.o
+                0x0000000008001ec8                tickCommunicationWatchdog
  .text.remainingCommunicationWatchdog
-                0x0000000008001e24        0xc SwarmBots THUMB Release/radio.o
-                0x0000000008001e24                remainingCommunicationWatchdog
+                0x0000000008001ee8        0xc SwarmBots THUMB Release/radio.o
+                0x0000000008001ee8                remainingCommunicationWatchdog
  .text.setRobotPipeAddress
-                0x0000000008001e30        0xc SwarmBots THUMB Release/radio.o
-                0x0000000008001e30                setRobotPipeAddress
+                0x0000000008001ef4        0xc SwarmBots THUMB Release/radio.o
+                0x0000000008001ef4                setRobotPipeAddress
  .text.setRobotId
-                0x0000000008001e3c        0xc SwarmBots THUMB Release/radio.o
-                0x0000000008001e3c                setRobotId
+                0x0000000008001f00        0xc SwarmBots THUMB Release/radio.o
+                0x0000000008001f00                setRobotId
  .text.getRobotId
-                0x0000000008001e48        0xc SwarmBots THUMB Release/radio.o
-                0x0000000008001e48                getRobotId
+                0x0000000008001f0c        0xc SwarmBots THUMB Release/radio.o
+                0x0000000008001f0c                getRobotId
  .text.openCommunication
-                0x0000000008001e54       0x1c SwarmBots THUMB Release/radio.o
-                0x0000000008001e54                openCommunication
+                0x0000000008001f18       0x1c SwarmBots THUMB Release/radio.o
+                0x0000000008001f18                openCommunication
  .text.initSensors
-                0x0000000008001e70       0xd4 SwarmBots THUMB Release/sensors.o
-                0x0000000008001e70                initSensors
+                0x0000000008001f34       0xd4 SwarmBots THUMB Release/sensors.o
+                0x0000000008001f34                initSensors
  .text.initPhotoDiodes
-                0x0000000008001f44       0xa4 SwarmBots THUMB Release/sensors.o
-                0x0000000008001f44                initPhotoDiodes
+                0x0000000008002008       0xa4 SwarmBots THUMB Release/sensors.o
+                0x0000000008002008                initPhotoDiodes
  .text.readPhotoDiode
-                0x0000000008001fe8       0xf0 SwarmBots THUMB Release/sensors.o
-                0x0000000008001fe8                readPhotoDiode
+                0x00000000080020ac       0xf0 SwarmBots THUMB Release/sensors.o
+                0x00000000080020ac                readPhotoDiode
  .text.calculatePhotodiodePosition
-                0x00000000080020d8      0x10c SwarmBots THUMB Release/sensors.o
-                0x00000000080020d8                calculatePhotodiodePosition
+                0x000000000800219c      0x10c SwarmBots THUMB Release/sensors.o
+                0x000000000800219c                calculatePhotodiodePosition
  .text.updateRobotPosition
-                0x00000000080021e4       0xfc SwarmBots THUMB Release/sensors.o
-                0x00000000080021e4                updateRobotPosition
+                0x00000000080022a8       0xfc SwarmBots THUMB Release/sensors.o
+                0x00000000080022a8                updateRobotPosition
  .text.getRobotPosition
-                0x00000000080022e0        0x8 SwarmBots THUMB Release/sensors.o
-                0x00000000080022e0                getRobotPosition
+                0x00000000080023a4        0x8 SwarmBots THUMB Release/sensors.o
+                0x00000000080023a4                getRobotPosition
  .text.getRobotAngle
-                0x00000000080022e8        0x8 SwarmBots THUMB Release/sensors.o
-                0x00000000080022e8                getRobotAngle
+                0x00000000080023ac        0x8 SwarmBots THUMB Release/sensors.o
+                0x00000000080023ac                getRobotAngle
  .text.isBlinded
-                0x00000000080022f0        0xc SwarmBots THUMB Release/sensors.o
-                0x00000000080022f0                isBlinded
+                0x00000000080023b4        0xc SwarmBots THUMB Release/sensors.o
+                0x00000000080023b4                isBlinded
  .text.maximumf
-                0x00000000080022fc       0x46 SwarmBots THUMB Release/position_control.o
-                0x00000000080022fc                maximumf
- *fill*         0x0000000008002342        0x2 
+                0x00000000080023c0       0x46 SwarmBots THUMB Release/position_control.o
+                0x00000000080023c0                maximumf
+ *fill*         0x0000000008002406        0x2 
  .text.angleControl
-                0x0000000008002344      0x1c4 SwarmBots THUMB Release/position_control.o
-                0x0000000008002344                angleControl
+                0x0000000008002408      0x1c4 SwarmBots THUMB Release/position_control.o
+                0x0000000008002408                angleControl
  .text.minimumc
-                0x0000000008002508       0x2a SwarmBots THUMB Release/position_control.o
-                0x0000000008002508                minimumc
+                0x00000000080025cc       0x2a SwarmBots THUMB Release/position_control.o
+                0x00000000080025cc                minimumc
  .text.maximumc
-                0x0000000008002532       0x2a SwarmBots THUMB Release/position_control.o
-                0x0000000008002532                maximumc
+                0x00000000080025f6       0x2a SwarmBots THUMB Release/position_control.o
+                0x00000000080025f6                maximumc
  .text.increaseVelocity
-                0x000000000800255c       0x5c SwarmBots THUMB Release/position_control.o
-                0x000000000800255c                increaseVelocity
+                0x0000000008002620       0x5c SwarmBots THUMB Release/position_control.o
+                0x0000000008002620                increaseVelocity
  .text.positionControl
-                0x00000000080025b8      0x2d0 SwarmBots THUMB Release/position_control.o
-                0x00000000080025b8                positionControl
+                0x000000000800267c      0x2d0 SwarmBots THUMB Release/position_control.o
+                0x000000000800267c                positionControl
  .text.setMotor1
-                0x0000000008002888       0x34 SwarmBots THUMB Release/motors.o
-                0x0000000008002888                setMotor1
+                0x000000000800294c       0x34 SwarmBots THUMB Release/motors.o
+                0x000000000800294c                setMotor1
  .text.setMotor2
-                0x00000000080028bc       0x34 SwarmBots THUMB Release/motors.o
-                0x00000000080028bc                setMotor2
+                0x0000000008002980       0x34 SwarmBots THUMB Release/motors.o
+                0x0000000008002980                setMotor2
  .text.initMotors
-                0x00000000080028f0      0x174 SwarmBots THUMB Release/motors.o
-                0x00000000080028f0                initMotors
+                0x00000000080029b4      0x174 SwarmBots THUMB Release/motors.o
+                0x00000000080029b4                initMotors
  .text.SystemInit
-                0x0000000008002a64       0x60 SwarmBots THUMB Release/system_stm32f0xx.o
-                0x0000000008002a64                SystemInit
+                0x0000000008002b28       0x60 SwarmBots THUMB Release/system_stm32f0xx.o
+                0x0000000008002b28                SystemInit
  .text.HAL_MspInit
-                0x0000000008002ac4        0x2 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002ac4                HAL_MspInit
+                0x0000000008002b88        0x2 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002b88                HAL_MspInit
  .text.HAL_InitTick
-                0x0000000008002ac6       0x24 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002ac6                HAL_InitTick
- *fill*         0x0000000008002aea        0x2 
+                0x0000000008002b8a       0x24 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002b8a                HAL_InitTick
+ *fill*         0x0000000008002bae        0x2 
  .text.HAL_Init
-                0x0000000008002aec       0x20 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002aec                HAL_Init
+                0x0000000008002bb0       0x20 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002bb0                HAL_Init
  .text.HAL_IncTick
-                0x0000000008002b0c       0x10 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002b0c                HAL_IncTick
+                0x0000000008002bd0       0x10 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002bd0                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008002b1c        0xc SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002b1c                HAL_GetTick
+                0x0000000008002be0        0xc SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002be0                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008002b28       0x24 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x0000000008002b28                HAL_Delay
+                0x0000000008002bec       0x24 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x0000000008002bec                HAL_Delay
  .text.HAL_NVIC_SetPriority
-                0x0000000008002b4c       0x68 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
-                0x0000000008002b4c                HAL_NVIC_SetPriority
+                0x0000000008002c10       0x68 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+                0x0000000008002c10                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008002bb4       0x14 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
-                0x0000000008002bb4                HAL_NVIC_EnableIRQ
+                0x0000000008002c78       0x14 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+                0x0000000008002c78                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008002bc8       0x38 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
-                0x0000000008002bc8                HAL_SYSTICK_Config
+                0x0000000008002c8c       0x38 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+                0x0000000008002c8c                HAL_SYSTICK_Config
  .text.HAL_DMA_Init
-                0x0000000008002c00       0x74 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
-                0x0000000008002c00                HAL_DMA_Init
+                0x0000000008002cc4       0x74 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+                0x0000000008002cc4                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x0000000008002c74       0x92 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
-                0x0000000008002c74                HAL_DMA_Start_IT
+                0x0000000008002d38       0x92 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+                0x0000000008002d38                HAL_DMA_Start_IT
  .text.HAL_DMA_IRQHandler
-                0x0000000008002d06       0xaa SwarmBots THUMB Release/stm32f0xx_hal_dma.o
-                0x0000000008002d06                HAL_DMA_IRQHandler
+                0x0000000008002dca       0xaa SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+                0x0000000008002dca                HAL_DMA_IRQHandler
  .text.HAL_GPIO_Init
-                0x0000000008002db0      0x1ac SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
-                0x0000000008002db0                HAL_GPIO_Init
+                0x0000000008002e74      0x1ac SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+                0x0000000008002e74                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x0000000008002f5c        0xc SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
-                0x0000000008002f5c                HAL_GPIO_ReadPin
+                0x0000000008003020        0xc SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+                0x0000000008003020                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0000000008002f68        0xc SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
-                0x0000000008002f68                HAL_GPIO_WritePin
+                0x000000000800302c        0xc SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+                0x000000000800302c                HAL_GPIO_WritePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x0000000008002f74       0x1c SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
-                0x0000000008002f74                HAL_GPIO_EXTI_IRQHandler
+                0x0000000008003038       0x1c SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+                0x0000000008003038                HAL_GPIO_EXTI_IRQHandler
  .text.I2C_Flush_TXDR
-                0x0000000008002f90       0x1e SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
- *fill*         0x0000000008002fae        0x2 
+                0x0000000008003054       0x1e SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ *fill*         0x0000000008003072        0x2 
  .text.I2C_TransferConfig
-                0x0000000008002fb0       0x24 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x0000000008003074       0x24 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_IsAcknowledgeFailed
-                0x0000000008002fd4       0x78 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x0000000008003098       0x78 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_WaitOnTXISFlagUntilTimeout
-                0x000000000800304c       0x54 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x0000000008003110       0x54 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_WaitOnFlagUntilTimeout
-                0x00000000080030a0       0x46 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x0000000008003164       0x46 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_RequestMemoryWrite
-                0x00000000080030e6       0x84 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x00000000080031aa       0x84 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_RequestMemoryRead
-                0x000000000800316a       0x82 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x000000000800322e       0x82 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.I2C_WaitOnSTOPFlagUntilTimeout
-                0x00000000080031ec       0x50 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x00000000080032b0       0x50 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .text.HAL_I2C_Init
-                0x000000000800323c       0xcc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
-                0x000000000800323c                HAL_I2C_Init
+                0x0000000008003300       0xcc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x0000000008003300                HAL_I2C_Init
  .text.HAL_I2C_Mem_Write
-                0x0000000008003308      0x1c0 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
-                0x0000000008003308                HAL_I2C_Mem_Write
+                0x00000000080033cc      0x1c0 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x00000000080033cc                HAL_I2C_Mem_Write
  .text.HAL_I2C_Mem_Read
-                0x00000000080034c8      0x1c8 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
-                0x00000000080034c8                HAL_I2C_Mem_Read
+                0x000000000800358c      0x1c8 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x000000000800358c                HAL_I2C_Mem_Read
  .text.HAL_RCC_OscConfig
-                0x0000000008003690      0x490 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
-                0x0000000008003690                HAL_RCC_OscConfig
+                0x0000000008003754      0x490 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008003754                HAL_RCC_OscConfig
  .text.HAL_RCC_MCOConfig
-                0x0000000008003b20       0x50 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
-                0x0000000008003b20                HAL_RCC_MCOConfig
+                0x0000000008003be4       0x50 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008003be4                HAL_RCC_MCOConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008003b70       0x78 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
-                0x0000000008003b70                HAL_RCC_GetSysClockFreq
+                0x0000000008003c34       0x78 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008003c34                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x0000000008003be8      0x16c SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
-                0x0000000008003be8                HAL_RCC_ClockConfig
+                0x0000000008003cac      0x16c SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008003cac                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008003d54        0xc SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
-                0x0000000008003d54                HAL_RCC_GetHCLKFreq
+                0x0000000008003e18        0xc SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008003e18                HAL_RCC_GetHCLKFreq
  .text.SPI_WaitFlagStateUntilTimeout
-                0x0000000008003d60       0x9c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008003e24       0x9c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.SPI_WaitFifoStateUntilTimeout
-                0x0000000008003dfc       0xd0 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008003ec0       0xd0 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.SPI_EndRxTxTransaction
-                0x0000000008003ecc       0x68 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008003f90       0x68 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.SPI_EndRxTransaction
-                0x0000000008003f34       0x8e SwarmBots THUMB Release/stm32f0xx_hal_spi.o
- *fill*         0x0000000008003fc2        0x2 
+                0x0000000008003ff8       0x8e SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ *fill*         0x0000000008004086        0x2 
  .text.HAL_SPI_Init
-                0x0000000008003fc4      0x100 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x0000000008003fc4                HAL_SPI_Init
+                0x0000000008004088      0x100 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004088                HAL_SPI_Init
  .text.HAL_SPI_TransmitReceive_DMA
-                0x00000000080040c4      0x200 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080040c4                HAL_SPI_TransmitReceive_DMA
+                0x0000000008004188      0x200 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004188                HAL_SPI_TransmitReceive_DMA
  .text.HAL_SPI_RxCpltCallback
-                0x00000000080042c4        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080042c4                HAL_SPI_RxCpltCallback
+                0x0000000008004388        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004388                HAL_SPI_RxCpltCallback
  .text.HAL_SPI_TxRxCpltCallback
-                0x00000000080042c6        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080042c6                HAL_SPI_TxRxCpltCallback
+                0x000000000800438a        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x000000000800438a                HAL_SPI_TxRxCpltCallback
  .text.HAL_SPI_RxHalfCpltCallback
-                0x00000000080042c8        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080042c8                HAL_SPI_RxHalfCpltCallback
+                0x000000000800438c        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x000000000800438c                HAL_SPI_RxHalfCpltCallback
  .text.SPI_DMAHalfReceiveCplt
-                0x00000000080042ca        0xa SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x000000000800438e        0xa SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.HAL_SPI_TxRxHalfCpltCallback
-                0x00000000080042d4        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080042d4                HAL_SPI_TxRxHalfCpltCallback
+                0x0000000008004398        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004398                HAL_SPI_TxRxHalfCpltCallback
  .text.SPI_DMAHalfTransmitReceiveCplt
-                0x00000000080042d6        0xa SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x000000000800439a        0xa SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.HAL_SPI_ErrorCallback
-                0x00000000080042e0        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080042e0                HAL_SPI_ErrorCallback
+                0x00000000080043a4        0x2 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x00000000080043a4                HAL_SPI_ErrorCallback
  .text.SPI_DMAError
-                0x00000000080042e2       0x22 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x00000000080043a6       0x22 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.SPI_DMAReceiveCplt
-                0x0000000008004304       0x5a SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x00000000080043c8       0x5a SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.SPI_DMATransmitReceiveCplt
-                0x000000000800435e       0x60 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004422       0x60 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .text.HAL_SPI_GetState
-                0x00000000080043be        0x8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
-                0x00000000080043be                HAL_SPI_GetState
- *fill*         0x00000000080043c6        0x2 
+                0x0000000008004482        0x8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000008004482                HAL_SPI_GetState
+ *fill*         0x000000000800448a        0x2 
  .text.TIM_OC1_SetConfig
-                0x00000000080043c8       0x9c SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x000000000800448c       0x9c SwarmBots THUMB Release/stm32f0xx_hal_tim.o
  .text.TIM_OC3_SetConfig
-                0x0000000008004464       0x88 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004528       0x88 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
  .text.TIM_OC4_SetConfig
-                0x00000000080044ec       0x74 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x00000000080045b0       0x74 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
  .text.HAL_TIM_Base_Start_IT
-                0x0000000008004560       0x16 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004560                HAL_TIM_Base_Start_IT
+                0x0000000008004624       0x16 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004624                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_PWM_MspInit
-                0x0000000008004576        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004576                HAL_TIM_PWM_MspInit
+                0x000000000800463a        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x000000000800463a                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008004578        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004578                HAL_TIM_PeriodElapsedCallback
+                0x000000000800463c        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x000000000800463c                HAL_TIM_PeriodElapsedCallback
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x000000000800457a        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x000000000800457a                HAL_TIM_OC_DelayElapsedCallback
+                0x000000000800463e        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x000000000800463e                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x000000000800457c        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x000000000800457c                HAL_TIM_IC_CaptureCallback
+                0x0000000008004640        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004640                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x000000000800457e        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x000000000800457e                HAL_TIM_PWM_PulseFinishedCallback
+                0x0000000008004642        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004642                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0000000008004580        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004580                HAL_TIM_TriggerCallback
+                0x0000000008004644        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004644                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x0000000008004582      0x15a SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004582                HAL_TIM_IRQHandler
+                0x0000000008004646      0x15a SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004646                HAL_TIM_IRQHandler
  .text.TIM_Base_SetConfig
-                0x00000000080046dc      0x128 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x00000000080046dc                TIM_Base_SetConfig
+                0x00000000080047a0      0x128 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x00000000080047a0                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x0000000008004804       0x34 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004804                HAL_TIM_Base_Init
+                0x00000000080048c8       0x34 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x00000000080048c8                HAL_TIM_Base_Init
  .text.HAL_TIM_PWM_Init
-                0x0000000008004838       0x34 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004838                HAL_TIM_PWM_Init
+                0x00000000080048fc       0x34 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x00000000080048fc                HAL_TIM_PWM_Init
  .text.TIM_OC2_SetConfig
-                0x000000000800486c       0x80 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x000000000800486c                TIM_OC2_SetConfig
+                0x0000000008004930       0x80 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004930                TIM_OC2_SetConfig
  .text.HAL_TIM_PWM_ConfigChannel
-                0x00000000080048ec       0xe8 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x00000000080048ec                HAL_TIM_PWM_ConfigChannel
+                0x00000000080049b0       0xe8 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x00000000080049b0                HAL_TIM_PWM_ConfigChannel
  .text.TIM_ETR_SetConfig
-                0x00000000080049d4       0x18 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x00000000080049d4                TIM_ETR_SetConfig
+                0x0000000008004a98       0x18 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004a98                TIM_ETR_SetConfig
  .text.HAL_TIM_ConfigClockSource
-                0x00000000080049ec      0x194 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x00000000080049ec                HAL_TIM_ConfigClockSource
+                0x0000000008004ab0      0x194 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004ab0                HAL_TIM_ConfigClockSource
  .text.TIM_CCxChannelCmd
-                0x0000000008004b80       0x16 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004b80                TIM_CCxChannelCmd
- *fill*         0x0000000008004b96        0x2 
+                0x0000000008004c44       0x16 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004c44                TIM_CCxChannelCmd
+ *fill*         0x0000000008004c5a        0x2 
  .text.HAL_TIM_PWM_Start
-                0x0000000008004b98       0x50 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
-                0x0000000008004b98                HAL_TIM_PWM_Start
+                0x0000000008004c5c       0x50 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000008004c5c                HAL_TIM_PWM_Start
  .text.HAL_TIMEx_CommutationCallback
-                0x0000000008004be8        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
-                0x0000000008004be8                HAL_TIMEx_CommutationCallback
+                0x0000000008004cac        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+                0x0000000008004cac                HAL_TIMEx_CommutationCallback
  .text.HAL_TIMEx_BreakCallback
-                0x0000000008004bea        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
-                0x0000000008004bea                HAL_TIMEx_BreakCallback
+                0x0000000008004cae        0x2 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+                0x0000000008004cae                HAL_TIMEx_BreakCallback
  .text.__aeabi_read_tp
-                0x0000000008004bec        0x8 SwarmBots THUMB Release/thumb_crt0.o
-                0x0000000008004bec                __aeabi_read_tp
+                0x0000000008004cb0        0x8 SwarmBots THUMB Release/thumb_crt0.o
+                0x0000000008004cb0                __aeabi_read_tp
  .text.libc.__int32_to_float32
-                0x0000000008004bf4       0x28 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004bf4                __int32_to_float32
-                0x0000000008004bf4                __floatsisf
-                0x0000000008004bf4                __aeabi_i2f
+                0x0000000008004cb8       0x28 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004cb8                __int32_to_float32
+                0x0000000008004cb8                __floatsisf
+                0x0000000008004cb8                __aeabi_i2f
  .text.libc.__float32_to_int32
-                0x0000000008004c1c       0x40 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004c1c                __float32_to_int32
-                0x0000000008004c1c                __aeabi_f2iz
-                0x0000000008004c1c                __fixsfsi
+                0x0000000008004ce0       0x40 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004ce0                __float32_to_int32
+                0x0000000008004ce0                __aeabi_f2iz
+                0x0000000008004ce0                __fixsfsi
+ .text.libc.__float32_to_float64
+                0x0000000008004d20       0x44 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004d20                __float32_to_float64
+                0x0000000008004d20                __aeabi_f2d
+                0x0000000008004d20                __extendsfdf2
+ .text.libc.__float64_to_float32
+                0x0000000008004d64       0x64 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004d64                __truncdfsf2
+                0x0000000008004d64                __float64_to_float32
+                0x0000000008004d64                __aeabi_d2f
  .text.libc.__float32_add
-                0x0000000008004c5c      0x14c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004c5c                __aeabi_frsub
-                0x0000000008004c64                __subsf3
-                0x0000000008004c64                __aeabi_fsub
-                0x0000000008004c64                __float32_sub
-                0x0000000008004c6c                __addsf3
-                0x0000000008004c6c                __float32_add
-                0x0000000008004c6c                __aeabi_fadd
+                0x0000000008004dc8      0x14c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004dc8                __aeabi_frsub
+                0x0000000008004dd0                __subsf3
+                0x0000000008004dd0                __aeabi_fsub
+                0x0000000008004dd0                __float32_sub
+                0x0000000008004dd8                __addsf3
+                0x0000000008004dd8                __float32_add
+                0x0000000008004dd8                __aeabi_fadd
  .text.libc.__float32_mul
-                0x0000000008004da8       0xb8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004da8                __mulsf3
-                0x0000000008004da8                __aeabi_fmul
-                0x0000000008004da8                __float32_mul
+                0x0000000008004f14       0xb8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004f14                __mulsf3
+                0x0000000008004f14                __aeabi_fmul
+                0x0000000008004f14                __float32_mul
  .text.libc.__float32_div
-                0x0000000008004e60       0x94 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004e60                __aeabi_fdiv
-                0x0000000008004e60                __float32_div
-                0x0000000008004e60                __divsf3
+                0x0000000008004fcc       0x94 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008004fcc                __aeabi_fdiv
+                0x0000000008004fcc                __float32_div
+                0x0000000008004fcc                __divsf3
  .text.libc.__aeabi_fcmpeq
-                0x0000000008004ef4       0x20 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004ef4                __aeabi_fcmpeq
+                0x0000000008005060       0x20 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008005060                __aeabi_fcmpeq
  .text.libc.__aeabi_fcmplt
-                0x0000000008004f14       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004f14                __aeabi_fcmplt
+                0x0000000008005080       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008005080                __aeabi_fcmplt
  .text.libc.__aeabi_fcmple
-                0x0000000008004f44       0x34 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004f44                __aeabi_fcmple
+                0x00000000080050b0       0x34 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x00000000080050b0                __aeabi_fcmple
  .text.libc.__aeabi_fcmpgt
-                0x0000000008004f78       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004f78                __aeabi_fcmpgt
+                0x00000000080050e4       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x00000000080050e4                __aeabi_fcmpgt
  .text.libc.__aeabi_fcmpge
-                0x0000000008004fa8       0x34 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
-                0x0000000008004fa8                __aeabi_fcmpge
+                0x0000000008005114       0x34 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008005114                __aeabi_fcmpge
+ .text.libc.__float64_add
+                0x0000000008005148      0x1dc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008005148                __aeabi_drsub
+                0x0000000008005152                __aeabi_dsub
+                0x0000000008005152                __float64_sub
+                0x0000000008005152                __subdf3
+                0x000000000800515c                __aeabi_dadd
+                0x000000000800515c                __float64_add
+                0x000000000800515c                __adddf3
+ .text.libc.__float64_mul
+                0x0000000008005324      0x18c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x000000000800535c                __float64_mul
+                0x000000000800535c                __muldf3
+                0x000000000800535c                __aeabi_dmul
+ .text.libc.__float64_div
+                0x00000000080054b0       0xc4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x00000000080054b0                __divdf3
+                0x00000000080054b0                __float64_div
+                0x00000000080054b0                __aeabi_ddiv
+ .text.libc.__float64_cmpeq
+                0x0000000008005574       0x30 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x0000000008005574                __aeabi_dcmpeq
+ .text.libc.__float64_cmplt
+                0x00000000080055a4       0x40 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+                0x00000000080055a4                __aeabi_dcmplt
  .text.libc.atanf
-                0x0000000008004fdc      0x180 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x0000000008004fdc                atanf
-                0x0000000008004fdc                atan(float)
+                0x00000000080055e4      0x180 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x00000000080055e4                atanf
+                0x00000000080055e4                atan(float)
  .text.libc.atan2f
-                0x000000000800515c       0xcc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x000000000800515c                atan2f
-                0x000000000800515c                atan2(float, float)
+                0x0000000008005764       0xcc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005764                atan2f
+                0x0000000008005764                atan2(float, float)
  .text.libc.cosf
-                0x0000000008005228      0x284 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x0000000008005228                cosf
-                0x0000000008005228                cos(float)
+                0x0000000008005830      0x284 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005830                cosf
+                0x0000000008005830                cos(float)
  .text.libc.expf
-                0x00000000080054ac      0x130 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x00000000080054ac                expf
-                0x00000000080054ac                exp(float)
+                0x0000000008005ab4      0x130 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005ab4                expf
+                0x0000000008005ab4                exp(float)
+ .text.libc.frexp
+                0x0000000008005be4       0x50 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005be4                frexp
+                0x0000000008005be4                frexp(double, int*)
+ .text.libc.ldexp
+                0x0000000008005c34       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005c34                ldexp
+                0x0000000008005c34                ldexp(double, int)
  .text.libc.logf
-                0x00000000080055dc      0x180 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x00000000080055dc                log(float)
-                0x00000000080055dc                logf
+                0x0000000008005ca4      0x180 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005ca4                log(float)
+                0x0000000008005ca4                logf
  .text.libc.powf
-                0x000000000800575c       0xd4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x000000000800575c                pow(float, float)
-                0x000000000800575c                powf
+                0x0000000008005e24       0xd4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005e24                pow(float, float)
+                0x0000000008005e24                powf
  .text.libc.sinf
-                0x0000000008005830      0x254 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x0000000008005830                sinf
-                0x0000000008005830                sin(float)
+                0x0000000008005ef8      0x254 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008005ef8                sinf
+                0x0000000008005ef8                sin(float)
  .text.libc.tanf
-                0x0000000008005a84      0x164 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x0000000008005a84                tanf
-                0x0000000008005a84                tan(float)
+                0x000000000800614c      0x164 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x000000000800614c                tanf
+                0x000000000800614c                tan(float)
+ .text.libc.sqrt
+                0x00000000080062b0      0x100 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x00000000080062b0                sqrt(double)
+                0x00000000080062b0                sqrt
  .text.libc.sqrtf
-                0x0000000008005be8       0xac C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
-                0x0000000008005be8                sqrt(float)
-                0x0000000008005be8                sqrtf
+                0x00000000080063b0       0xac C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x00000000080063b0                sqrt(float)
+                0x00000000080063b0                sqrtf
  .text.libc.fabsf
-                0x0000000008005c94        0x8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
-                0x0000000008005c94                fabsf
-                0x0000000008005c94                fabs(float)
+                0x000000000800645c        0x8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
+                0x000000000800645c                fabsf
+                0x000000000800645c                fabs(float)
  .text.libc.ldexpf
-                0x0000000008005c9c       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
-                0x0000000008005c9c                ldexp(float, int)
-                0x0000000008005c9c                ldexpf
+                0x0000000008006464       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
+                0x0000000008006464                ldexp(float, int)
+                0x0000000008006464                ldexpf
  .text.libc.frexpf
-                0x0000000008005cc0       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
-                0x0000000008005cc0                frexpf
-                0x0000000008005cc0                frexp(float, int*)
+                0x0000000008006488       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
+                0x0000000008006488                frexpf
+                0x0000000008006488                frexp(float, int*)
  .text.libc.__int64_udivmod
-                0x0000000008005ce4       0xac C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
-                0x0000000008005d1a                __aeabi_uldivmod
-                0x0000000008005d1a                __int64_udiv
-                0x0000000008005d1a                __udivdi3
-                0x0000000008005d1a                __int64_udivmod
+                0x00000000080064ac       0xac C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
+                0x00000000080064e2                __aeabi_uldivmod
+                0x00000000080064e2                __int64_udiv
+                0x00000000080064e2                __udivdi3
+                0x00000000080064e2                __int64_udivmod
  .text.libc.__int32_div
-                0x0000000008005d90       0x64 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
-                0x0000000008005d90                __int32_div
-                0x0000000008005d90                __aeabi_idiv
-                0x0000000008005d90                __divsi3
-                0x0000000008005dcc                __aeabi_uidiv
-                0x0000000008005dcc                __uint32_div
-                0x0000000008005dcc                __udivsi3
+                0x0000000008006558       0x64 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
+                0x0000000008006558                __int32_div
+                0x0000000008006558                __aeabi_idiv
+                0x0000000008006558                __divsi3
+                0x0000000008006594                __aeabi_uidiv
+                0x0000000008006594                __uint32_div
+                0x0000000008006594                __udivsi3
  .text.libc.__aeabi_uidivmod
-                0x0000000008005df4       0x2c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
-                0x0000000008005df4                __aeabi_uidivmod
-                0x0000000008005df4                __int32_udivmod
+                0x00000000080065bc       0x2c C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
+                0x00000000080065bc                __aeabi_uidivmod
+                0x00000000080065bc                __int32_udivmod
  .text.libc.abs
-                0x0000000008005e20        0x8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
-                0x0000000008005e20                abs
+                0x00000000080065e8        0x8 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x00000000080065e8                abs
  .text.libc.__aeabi_errno_addr
-                0x0000000008005e28       0x10 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
-                0x0000000008005e28                __aeabi_errno_addr
+                0x00000000080065f0       0x10 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x00000000080065f0                __aeabi_errno_addr
+ .text.libc.rand
+                0x0000000008006600       0x24 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x0000000008006600                rand
+ .text.libc.srand
+                0x0000000008006624        0xc C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x0000000008006624                srand
  .text.libc.memcpy
-                0x0000000008005e38       0x18 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
-                0x0000000008005e38                __aeabi_memcpy
-                0x0000000008005e38                __aeabi_memcpy4
-                0x0000000008005e38                __aeabi_memcpy8
-                0x0000000008005e38                memcpy
+                0x0000000008006630       0x18 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
+                0x0000000008006630                __aeabi_memcpy
+                0x0000000008006630                __aeabi_memcpy4
+                0x0000000008006630                __aeabi_memcpy8
+                0x0000000008006630                memcpy
  .text.libc.memcpy_fast
-                0x0000000008005e50        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
-                0x0000000008005e50                memcpy_fast
+                0x0000000008006648        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
+                0x0000000008006648                memcpy_fast
  .text.libc.memset
-                0x0000000008005e54       0x14 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
-                0x0000000008005e54                memset
-                0x0000000008005e68                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x0000000000005bf8                __text_size__ = SIZEOF (.text)
-                0x0000000008005e68                __text_load_end__ = __text_end__
+                0x000000000800664c       0x14 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
+                0x000000000800664c                memset
+                0x0000000008006660                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x00000000000063f0                __text_size__ = SIZEOF (.text)
+                0x0000000008006660                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -4428,76 +4455,76 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 SwarmBots THUMB Release/stm32f0xx_it.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ >= __FLASH_segment_start__) && (__text_end__ <= __FLASH_segment_end__))), error: .text is too large to fit in FLASH memory segment)
-                0x0000000008005e68                __dtors_load_start__ = ALIGN (__text_end__, 0x4)
+                0x0000000008006660                __dtors_load_start__ = ALIGN (__text_end__, 0x4)
 
-.dtors          0x0000000008005e68        0x0
-                0x0000000008005e68                __dtors_start__ = .
+.dtors          0x0000000008006660        0x0
+                0x0000000008006660                __dtors_start__ = .
  *(SORT(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x0000000008005e68                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x0000000008006660                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x0000000008005e68                __dtors_load_end__ = __dtors_end__
+                0x0000000008006660                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ >= __FLASH_segment_start__) && (__dtors_end__ <= __FLASH_segment_end__))), error: .dtors is too large to fit in FLASH memory segment)
-                0x0000000008005e68                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x0000000008006660                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x0000000008005e68        0x0
-                0x0000000008005e68                __ctors_start__ = .
+.ctors          0x0000000008006660        0x0
+                0x0000000008006660                __ctors_start__ = .
  *(SORT(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT(.init_array.*))
-                0x0000000008005e68                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x0000000008006660                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x0000000008005e68                __ctors_load_end__ = __ctors_end__
+                0x0000000008006660                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ >= __FLASH_segment_start__) && (__ctors_end__ <= __FLASH_segment_end__))), error: .ctors is too large to fit in FLASH memory segment)
-                0x0000000008005e68                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x0000000008006660                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x0000000008005e68       0x50
-                0x0000000008005e68                __rodata_start__ = .
+.rodata         0x0000000008006660       0x50
+                0x0000000008006660                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.child_pipe
-                0x0000000008005e68        0x6 SwarmBots THUMB Release/RF24.o
- *fill*         0x0000000008005e6e        0x2 
+                0x0000000008006660        0x6 SwarmBots THUMB Release/RF24.o
+ *fill*         0x0000000008006666        0x2 
  .rodata.AHBPrescTable
-                0x0000000008005e70       0x10 SwarmBots THUMB Release/system_stm32f0xx.o
-                0x0000000008005e70                AHBPrescTable
- .rodata        0x0000000008005e80       0x20 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000008006668       0x10 SwarmBots THUMB Release/system_stm32f0xx.o
+                0x0000000008006668                AHBPrescTable
+ .rodata        0x0000000008006678       0x20 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
  .rodata.libc.atanf_a
-                0x0000000008005ea0       0x10 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
+                0x0000000008006698       0x10 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2.o)
  .rodata.libc.__aeabi_EDOM
-                0x0000000008005eb0        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
-                0x0000000008005eb0                __aeabi_EDOM
+                0x00000000080066a8        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x00000000080066a8                __aeabi_EDOM
  .rodata.libc.__aeabi_ERANGE
-                0x0000000008005eb4        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
-                0x0000000008005eb4                __aeabi_ERANGE
-                0x0000000008005eb8                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
+                0x00000000080066ac        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x00000000080066ac                __aeabi_ERANGE
+                0x00000000080066b0                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
                 0x0000000000000050                __rodata_size__ = SIZEOF (.rodata)
-                0x0000000008005eb8                __rodata_load_end__ = __rodata_end__
+                0x00000000080066b0                __rodata_load_end__ = __rodata_end__
 
 .rel.dyn        0x0000000008000000        0x0
  .rel.iplt      0x0000000008000000        0x0 SwarmBots THUMB Release/stm32f0xx_it.o
                 0x0000000000000001                . = ASSERT (((__rodata_start__ == __rodata_end__) || ((__rodata_end__ >= __FLASH_segment_start__) && (__rodata_end__ <= __FLASH_segment_end__))), error: .rodata is too large to fit in FLASH memory segment)
-                0x0000000008005eb8                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
+                0x00000000080066b0                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
 
-.ARM.exidx      0x0000000008005eb8        0x0
-                0x0000000008005eb8                __ARM.exidx_start__ = .
-                0x0000000008005eb8                __exidx_start = __ARM.exidx_start__
+.ARM.exidx      0x00000000080066b0        0x0
+                0x00000000080066b0                __ARM.exidx_start__ = .
+                0x00000000080066b0                __exidx_start = __ARM.exidx_start__
  *(.ARM.exidx .ARM.exidx.*)
-                0x0000000008005eb8                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
+                0x00000000080066b0                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
                 0x0000000000000000                __ARM.exidx_size__ = SIZEOF (.ARM.exidx)
-                0x0000000008005eb8                __exidx_end = __ARM.exidx_end__
-                0x0000000008005eb8                __ARM.exidx_load_end__ = __ARM.exidx_end__
+                0x00000000080066b0                __exidx_end = __ARM.exidx_end__
+                0x00000000080066b0                __ARM.exidx_load_end__ = __ARM.exidx_end__
                 0x0000000000000001                . = ASSERT (((__ARM.exidx_start__ == __ARM.exidx_end__) || ((__ARM.exidx_end__ >= __FLASH_segment_start__) && (__ARM.exidx_end__ <= __FLASH_segment_end__))), error: .ARM.exidx is too large to fit in FLASH memory segment)
-                0x0000000008005eb8                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
+                0x00000000080066b0                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
 
-.fast           0x0000000020000000        0x0 load address 0x0000000008005eb8
+.fast           0x0000000020000000        0x0 load address 0x00000000080066b0
                 0x0000000020000000                __fast_start__ = .
  *(.fast .fast.*)
                 0x0000000020000000                __fast_end__ = (__fast_start__ + SIZEOF (.fast))
                 0x0000000000000000                __fast_size__ = SIZEOF (.fast)
-                0x0000000008005eb8                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
+                0x00000000080066b0                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
                 0x0000000000000001                . = ASSERT (((__fast_load_start__ == __fast_load_end__) || ((__fast_load_end__ >= __FLASH_segment_start__) && (__fast_load_end__ <= __FLASH_segment_end__))), error: .fast is too large to fit in FLASH memory segment)
 
 .fast_run       0x0000000020000000        0x0
@@ -4507,9 +4534,9 @@ Linker script and memory map
                 0x0000000000000000                __fast_run_size__ = SIZEOF (.fast_run)
                 0x0000000020000000                __fast_run_load_end__ = __fast_run_end__
                 0x0000000000000001                . = ASSERT (((__fast_run_start__ == __fast_run_end__) || ((__fast_run_end__ >= __RAM_segment_start__) && (__fast_run_end__ <= __RAM_segment_end__))), error: .fast_run is too large to fit in RAM memory segment)
-                0x0000000008005eb8                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
+                0x00000000080066b0                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
 
-.data           0x0000000020000000       0x2c load address 0x0000000008005eb8
+.data           0x0000000020000000       0x38 load address 0x00000000080066b0
                 0x0000000020000000                __data_start__ = .
  *(.data .data.* .gnu.linkonce.d.*)
  .data.currentGoal
@@ -4522,289 +4549,299 @@ Linker script and memory map
  .data.motorValues
                 0x0000000020000010        0xc SwarmBots THUMB Release/functions.o
                 0x0000000020000010                motorValues
+ .data.randSeed
+                0x000000002000001c        0x4 SwarmBots THUMB Release/functions.o
+                0x000000002000001c                randSeed
  .data.LSM6DS3_ADDRESS
-                0x000000002000001c        0x1 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000002000001c                LSM6DS3_ADDRESS
- *fill*         0x000000002000001d        0x3 
+                0x0000000020000020        0x1 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000020000020                LSM6DS3_ADDRESS
+ *fill*         0x0000000020000021        0x7 
  .data.myPipeAddress
-                0x0000000020000020        0x8 SwarmBots THUMB Release/radio.o
-                0x0000000020000020                myPipeAddress
+                0x0000000020000028        0x8 SwarmBots THUMB Release/radio.o
+                0x0000000020000028                myPipeAddress
  .data.SystemCoreClock
-                0x0000000020000028        0x4 SwarmBots THUMB Release/system_stm32f0xx.o
-                0x0000000020000028                SystemCoreClock
-                0x000000002000002c                __data_end__ = (__data_start__ + SIZEOF (.data))
-                0x000000000000002c                __data_size__ = SIZEOF (.data)
-                0x0000000008005ee4                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
+                0x0000000020000030        0x4 SwarmBots THUMB Release/system_stm32f0xx.o
+                0x0000000020000030                SystemCoreClock
+ .data.libc.__RAL_rand_next
+                0x0000000020000034        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x0000000020000034                __RAL_rand_next
+                0x0000000020000038                __data_end__ = (__data_start__ + SIZEOF (.data))
+                0x0000000000000038                __data_size__ = SIZEOF (.data)
+                0x00000000080066e8                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
 
 .igot.plt       0x0000000100000000        0x0
  .igot.plt      0x0000000100000000        0x0 SwarmBots THUMB Release/stm32f0xx_it.o
                 0x0000000000000001                . = ASSERT (((__data_load_start__ == __data_load_end__) || ((__data_load_end__ >= __FLASH_segment_start__) && (__data_load_end__ <= __FLASH_segment_end__))), error: .data is too large to fit in FLASH memory segment)
 
-.data_run       0x0000000020000000       0x2c load address 0x0000000008005eb8
+.data_run       0x0000000020000000       0x38 load address 0x00000000080066b0
                 0x0000000020000000                __data_run_start__ = .
-                0x000000002000002c                . = MAX ((__data_run_start__ + SIZEOF (.data)), .)
- *fill*         0x0000000020000000       0x2c 
-                0x000000002000002c                __data_run_end__ = (__data_run_start__ + SIZEOF (.data_run))
-                0x000000000000002c                __data_run_size__ = SIZEOF (.data_run)
-                0x000000002000002c                __data_run_load_end__ = __data_run_end__
+                0x0000000020000038                . = MAX ((__data_run_start__ + SIZEOF (.data)), .)
+ *fill*         0x0000000020000000       0x38 
+                0x0000000020000038                __data_run_end__ = (__data_run_start__ + SIZEOF (.data_run))
+                0x0000000000000038                __data_run_size__ = SIZEOF (.data_run)
+                0x0000000020000038                __data_run_load_end__ = __data_run_end__
                 0x0000000000000001                . = ASSERT (((__data_run_start__ == __data_run_end__) || ((__data_run_end__ >= __RAM_segment_start__) && (__data_run_end__ <= __RAM_segment_end__))), error: .data_run is too large to fit in RAM memory segment)
-                0x0000000008005ee4                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
+                0x00000000080066e8                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
 
-.tdata          0x000000002000002c        0x0 load address 0x0000000008005ee4
-                0x000000002000002c                __tdata_start__ = .
+.tdata          0x0000000020000038        0x0 load address 0x00000000080066e8
+                0x0000000020000038                __tdata_start__ = .
  *(.tdata .tdata.*)
-                0x000000002000002c                __tdata_end__ = (__tdata_start__ + SIZEOF (.tdata))
+                0x0000000020000038                __tdata_end__ = (__tdata_start__ + SIZEOF (.tdata))
                 0x0000000000000000                __tdata_size__ = SIZEOF (.tdata)
-                0x0000000008005ee4                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
-                0x0000000008005ee4                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
-                0x0000000000005ee4                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
+                0x00000000080066e8                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
+                0x00000000080066e8                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
+                0x00000000000066e8                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
                 0x0000000000000001                . = ASSERT (((__tdata_load_start__ == __tdata_load_end__) || ((__tdata_load_end__ >= __FLASH_segment_start__) && (__tdata_load_end__ <= __FLASH_segment_end__))), error: .tdata is too large to fit in FLASH memory segment)
 
-.tdata_run      0x000000002000002c        0x0
-                0x000000002000002c                __tdata_run_start__ = .
-                0x000000002000002c                . = MAX ((__tdata_run_start__ + SIZEOF (.tdata)), .)
-                0x000000002000002c                __tdata_run_end__ = (__tdata_run_start__ + SIZEOF (.tdata_run))
+.tdata_run      0x0000000020000038        0x0
+                0x0000000020000038                __tdata_run_start__ = .
+                0x0000000020000038                . = MAX ((__tdata_run_start__ + SIZEOF (.tdata)), .)
+                0x0000000020000038                __tdata_run_end__ = (__tdata_run_start__ + SIZEOF (.tdata_run))
                 0x0000000000000000                __tdata_run_size__ = SIZEOF (.tdata_run)
-                0x000000002000002c                __tdata_run_load_end__ = __tdata_run_end__
+                0x0000000020000038                __tdata_run_load_end__ = __tdata_run_end__
                 0x0000000000000001                . = ASSERT (((__tdata_run_start__ == __tdata_run_end__) || ((__tdata_run_end__ >= __RAM_segment_start__) && (__tdata_run_end__ <= __RAM_segment_end__))), error: .tdata_run is too large to fit in RAM memory segment)
-                0x000000002000002c                __bss_load_start__ = ALIGN (__tdata_run_end__, 0x4)
+                0x0000000020000038                __bss_load_start__ = ALIGN (__tdata_run_end__, 0x4)
 
-.bss            0x000000002000002c      0x58c
-                0x000000002000002c                __bss_start__ = .
+.bss            0x0000000020000038      0x590
+                0x0000000020000038                __bss_start__ = .
  *(.bss .bss.* .gnu.linkonce.b.*)
- *fill*         0x000000002000002c        0x4 
  .bss.microTick
-                0x0000000020000030        0x8 SwarmBots THUMB Release/stm32f0xx_it.o
-                0x0000000020000030                microTick
- .bss.hdma_rx   0x0000000020000038       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
+                0x0000000020000038        0x8 SwarmBots THUMB Release/stm32f0xx_it.o
+                0x0000000020000038                microTick
+ .bss.hdma_rx   0x0000000020000040       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
  .bss.hdma_rx.6632
-                0x000000002000007c       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
- .bss.hdma_tx   0x00000000200000c0       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
+                0x0000000020000084       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
+ .bss.hdma_tx   0x00000000200000c8       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
  .bss.hdma_tx.6631
-                0x0000000020000104       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
+                0x000000002000010c       0x44 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
  .bss.I2cHandle
-                0x0000000020000148       0x4c SwarmBots THUMB Release/utilities.o
-                0x0000000020000148                I2cHandle
+                0x0000000020000150       0x4c SwarmBots THUMB Release/utilities.o
+                0x0000000020000150                I2cHandle
  .bss.SpiHandle
-                0x0000000020000194       0x64 SwarmBots THUMB Release/utilities.o
-                0x0000000020000194                SpiHandle
+                0x000000002000019c       0x64 SwarmBots THUMB Release/utilities.o
+                0x000000002000019c                SpiHandle
  .bss.microTimHandle
-                0x00000000200001f8       0x40 SwarmBots THUMB Release/utilities.o
-                0x00000000200001f8                microTimHandle
- .bss.QTBuffer  0x0000000020000238       0x16 SwarmBots THUMB Release/qt1070.o
-                0x0000000020000238                QTBuffer
+                0x0000000020000200       0x40 SwarmBots THUMB Release/utilities.o
+                0x0000000020000200                microTimHandle
+ .bss.QTBuffer  0x0000000020000240       0x16 SwarmBots THUMB Release/qt1070.o
+                0x0000000020000240                QTBuffer
  .bss.chargingStatus
-                0x000000002000024e        0x1 SwarmBots THUMB Release/functions.o
-                0x000000002000024e                chargingStatus
+                0x0000000020000256        0x1 SwarmBots THUMB Release/functions.o
+                0x0000000020000256                chargingStatus
  .bss.currentTouch
-                0x000000002000024f        0x1 SwarmBots THUMB Release/functions.o
-                0x000000002000024f                currentTouch
+                0x0000000020000257        0x1 SwarmBots THUMB Release/functions.o
+                0x0000000020000257                currentTouch
  .bss.isAddressValid
-                0x0000000020000250        0x1 SwarmBots THUMB Release/functions.o
-                0x0000000020000250                isAddressValid
+                0x0000000020000258        0x1 SwarmBots THUMB Release/functions.o
+                0x0000000020000258                isAddressValid
  .bss.radioEvent
-                0x0000000020000251        0x1 SwarmBots THUMB Release/functions.o
-                0x0000000020000251                radioEvent
- .bss.reached   0x0000000020000252        0x1 SwarmBots THUMB Release/functions.o
-                0x0000000020000252                reached
+                0x0000000020000259        0x1 SwarmBots THUMB Release/functions.o
+                0x0000000020000259                radioEvent
+ .bss.randomNumber
+                0x000000002000025a        0x2 SwarmBots THUMB Release/functions.o
+                0x000000002000025a                randomNumber
+ .bss.reached   0x000000002000025c        0x1 SwarmBots THUMB Release/functions.o
+                0x000000002000025c                reached
  .bss.touchChanged
-                0x0000000020000253        0x1 SwarmBots THUMB Release/functions.o
-                0x0000000020000253                touchChanged
+                0x000000002000025d        0x1 SwarmBots THUMB Release/functions.o
+                0x000000002000025d                touchChanged
+ *fill*         0x000000002000025e        0x2 
  .bss.IMUBuffer
-                0x0000000020000254       0x16 SwarmBots THUMB Release/lsm6ds3.o
-                0x0000000020000254                IMUBuffer
+                0x0000000020000260       0x16 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000020000260                IMUBuffer
  .bss.currentFSG
-                0x000000002000026a        0x1 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000002000026a                currentFSG
+                0x0000000020000276        0x1 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000020000276                currentFSG
  .bss.currentFSXL
-                0x000000002000026b        0x1 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000002000026b                currentFSXL
+                0x0000000020000277        0x1 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000020000277                currentFSXL
  .bss.gyroOffsets
-                0x000000002000026c        0x6 SwarmBots THUMB Release/lsm6ds3.o
-                0x000000002000026c                gyroOffsets
+                0x0000000020000278        0x6 SwarmBots THUMB Release/lsm6ds3.o
+                0x0000000020000278                gyroOffsets
  .bss.ack_payload_available
-                0x0000000020000272        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000272                ack_payload_available
+                0x000000002000027e        0x1 SwarmBots THUMB Release/RF24.o
+                0x000000002000027e                ack_payload_available
  .bss.ack_payload_length
-                0x0000000020000273        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000273                ack_payload_length
+                0x000000002000027f        0x1 SwarmBots THUMB Release/RF24.o
+                0x000000002000027f                ack_payload_length
  .bss.dynamic_payloads_enabled
-                0x0000000020000274        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000274                dynamic_payloads_enabled
- .bss.isListening
-                0x0000000020000275        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000275                isListening
- .bss.p_variant
-                0x0000000020000276        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000276                p_variant
- .bss.payload_size
-                0x0000000020000277        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000277                payload_size
- .bss.pipe0_reading_address
-                0x0000000020000278        0x8 SwarmBots THUMB Release/RF24.o
-                0x0000000020000278                pipe0_reading_address
- .bss.wide_band
                 0x0000000020000280        0x1 SwarmBots THUMB Release/RF24.o
-                0x0000000020000280                wide_band
- *fill*         0x0000000020000281        0x1 
+                0x0000000020000280                dynamic_payloads_enabled
+ .bss.isListening
+                0x0000000020000281        0x1 SwarmBots THUMB Release/RF24.o
+                0x0000000020000281                isListening
+ .bss.p_variant
+                0x0000000020000282        0x1 SwarmBots THUMB Release/RF24.o
+                0x0000000020000282                p_variant
+ .bss.payload_size
+                0x0000000020000283        0x1 SwarmBots THUMB Release/RF24.o
+                0x0000000020000283                payload_size
+ *fill*         0x0000000020000284        0x4 
+ .bss.pipe0_reading_address
+                0x0000000020000288        0x8 SwarmBots THUMB Release/RF24.o
+                0x0000000020000288                pipe0_reading_address
+ .bss.wide_band
+                0x0000000020000290        0x1 SwarmBots THUMB Release/RF24.o
+                0x0000000020000290                wide_band
+ *fill*         0x0000000020000291        0x1 
  .bss.counter.6888
-                0x0000000020000282        0x2 SwarmBots THUMB Release/led.o
+                0x0000000020000292        0x2 SwarmBots THUMB Release/led.o
  .bss.currentBlue
-                0x0000000020000284        0x4 SwarmBots THUMB Release/led.o
-                0x0000000020000284                currentBlue
+                0x0000000020000294        0x4 SwarmBots THUMB Release/led.o
+                0x0000000020000294                currentBlue
  .bss.currentGreen
-                0x0000000020000288        0x4 SwarmBots THUMB Release/led.o
-                0x0000000020000288                currentGreen
+                0x0000000020000298        0x4 SwarmBots THUMB Release/led.o
+                0x0000000020000298                currentGreen
  .bss.currentRed
-                0x000000002000028c        0x4 SwarmBots THUMB Release/led.o
-                0x000000002000028c                currentRed
+                0x000000002000029c        0x4 SwarmBots THUMB Release/led.o
+                0x000000002000029c                currentRed
  .bss.direction.6887
-                0x0000000020000290        0x2 SwarmBots THUMB Release/led.o
+                0x00000000200002a0        0x2 SwarmBots THUMB Release/led.o
  .bss.isRGBInitialized
-                0x0000000020000292        0x1 SwarmBots THUMB Release/led.o
-                0x0000000020000292                isRGBInitialized
- *fill*         0x0000000020000293        0x1 
+                0x00000000200002a2        0x1 SwarmBots THUMB Release/led.o
+                0x00000000200002a2                isRGBInitialized
+ *fill*         0x00000000200002a3        0x1 
  .bss.rgbTimHandle
-                0x0000000020000294       0x40 SwarmBots THUMB Release/led.o
-                0x0000000020000294                rgbTimHandle
+                0x00000000200002a4       0x40 SwarmBots THUMB Release/led.o
+                0x00000000200002a4                rgbTimHandle
  .bss.sRgbConfig
-                0x00000000200002d4       0x1c SwarmBots THUMB Release/led.o
-                0x00000000200002d4                sRgbConfig
+                0x00000000200002e4       0x1c SwarmBots THUMB Release/led.o
+                0x00000000200002e4                sRgbConfig
  .bss.communicationWatchdog
-                0x00000000200002f0        0x4 SwarmBots THUMB Release/radio.o
-                0x00000000200002f0                communicationWatchdog
+                0x0000000020000300        0x4 SwarmBots THUMB Release/radio.o
+                0x0000000020000300                communicationWatchdog
  .bss.isRadioInitialized
-                0x00000000200002f4        0x1 SwarmBots THUMB Release/radio.o
-                0x00000000200002f4                isRadioInitialized
- .bss.myId      0x00000000200002f5        0x1 SwarmBots THUMB Release/radio.o
-                0x00000000200002f5                myId
- .bss.blinded   0x00000000200002f6        0x1 SwarmBots THUMB Release/sensors.o
-                0x00000000200002f6                blinded
- *fill*         0x00000000200002f7        0x1 
+                0x0000000020000304        0x1 SwarmBots THUMB Release/radio.o
+                0x0000000020000304                isRadioInitialized
+ .bss.myId      0x0000000020000305        0x1 SwarmBots THUMB Release/radio.o
+                0x0000000020000305                myId
+ .bss.blinded   0x0000000020000306        0x1 SwarmBots THUMB Release/sensors.o
+                0x0000000020000306                blinded
+ *fill*         0x0000000020000307        0x1 
  .bss.firstBitEver
-                0x00000000200002f8        0x2 SwarmBots THUMB Release/sensors.o
-                0x00000000200002f8                firstBitEver
+                0x0000000020000308        0x2 SwarmBots THUMB Release/sensors.o
+                0x0000000020000308                firstBitEver
  .bss.isPhotoDiodesInitialized
-                0x00000000200002fa        0x1 SwarmBots THUMB Release/sensors.o
-                0x00000000200002fa                isPhotoDiodesInitialized
+                0x000000002000030a        0x1 SwarmBots THUMB Release/sensors.o
+                0x000000002000030a                isPhotoDiodesInitialized
  .bss.isSensorsInitialized
-                0x00000000200002fb        0x1 SwarmBots THUMB Release/sensors.o
-                0x00000000200002fb                isSensorsInitialized
+                0x000000002000030b        0x1 SwarmBots THUMB Release/sensors.o
+                0x000000002000030b                isSensorsInitialized
  .bss.lastPositionTimestamp.7613
-                0x00000000200002fc        0x4 SwarmBots THUMB Release/sensors.o
+                0x000000002000030c        0x4 SwarmBots THUMB Release/sensors.o
  .bss.photoDiodesPositions
-                0x0000000020000300        0x8 SwarmBots THUMB Release/sensors.o
-                0x0000000020000300                photoDiodesPositions
+                0x0000000020000310        0x8 SwarmBots THUMB Release/sensors.o
+                0x0000000020000310                photoDiodesPositions
  .bss.positionBitBuffer
-                0x0000000020000308      0x206 SwarmBots THUMB Release/sensors.o
-                0x0000000020000308                positionBitBuffer
- *fill*         0x000000002000050e        0x2 
+                0x0000000020000318      0x206 SwarmBots THUMB Release/sensors.o
+                0x0000000020000318                positionBitBuffer
+ *fill*         0x000000002000051e        0x2 
  .bss.previousTime.7583
-                0x0000000020000510       0x10 SwarmBots THUMB Release/sensors.o
- .bss.quaternion
                 0x0000000020000520       0x10 SwarmBots THUMB Release/sensors.o
-                0x0000000020000520                quaternion
+ .bss.quaternion
+                0x0000000020000530       0x10 SwarmBots THUMB Release/sensors.o
+                0x0000000020000530                quaternion
  .bss.readyToUpdate0
-                0x0000000020000530        0x1 SwarmBots THUMB Release/sensors.o
-                0x0000000020000530                readyToUpdate0
+                0x0000000020000540        0x1 SwarmBots THUMB Release/sensors.o
+                0x0000000020000540                readyToUpdate0
  .bss.readyToUpdate1
-                0x0000000020000531        0x1 SwarmBots THUMB Release/sensors.o
-                0x0000000020000531                readyToUpdate1
- *fill*         0x0000000020000532        0x2 
- .bss.robotOrientation
-                0x0000000020000534        0x4 SwarmBots THUMB Release/sensors.o
-                0x0000000020000534                robotOrientation
- .bss.robotPosition
-                0x0000000020000538        0x4 SwarmBots THUMB Release/sensors.o
-                0x0000000020000538                robotPosition
- .bss.alignCounter.7654
-                0x000000002000053c        0x4 SwarmBots THUMB Release/position_control.o
- .bss.aligned1.7677
-                0x0000000020000540        0x1 SwarmBots THUMB Release/position_control.o
- .bss.aligned2.7678
-                0x0000000020000541        0x1 SwarmBots THUMB Release/position_control.o
+                0x0000000020000541        0x1 SwarmBots THUMB Release/sensors.o
+                0x0000000020000541                readyToUpdate1
  *fill*         0x0000000020000542        0x2 
- .bss.iTerm.7649
-                0x0000000020000544        0x4 SwarmBots THUMB Release/position_control.o
- .bss.justStarted.7685
-                0x0000000020000548        0x1 SwarmBots THUMB Release/position_control.o
- *fill*         0x0000000020000549        0x3 
- .bss.lastAngleDiff.7653
+ .bss.robotOrientation
+                0x0000000020000544        0x4 SwarmBots THUMB Release/sensors.o
+                0x0000000020000544                robotOrientation
+ .bss.robotPosition
+                0x0000000020000548        0x4 SwarmBots THUMB Release/sensors.o
+                0x0000000020000548                robotPosition
+ .bss.alignCounter.7654
                 0x000000002000054c        0x4 SwarmBots THUMB Release/position_control.o
+ .bss.aligned1.7677
+                0x0000000020000550        0x1 SwarmBots THUMB Release/position_control.o
+ .bss.aligned2.7678
+                0x0000000020000551        0x1 SwarmBots THUMB Release/position_control.o
+ *fill*         0x0000000020000552        0x2 
+ .bss.iTerm.7649
+                0x0000000020000554        0x4 SwarmBots THUMB Release/position_control.o
+ .bss.justStarted.7685
+                0x0000000020000558        0x1 SwarmBots THUMB Release/position_control.o
+ *fill*         0x0000000020000559        0x3 
+ .bss.lastAngleDiff.7653
+                0x000000002000055c        0x4 SwarmBots THUMB Release/position_control.o
  .bss.lastTime.7726
-                0x0000000020000550        0x4 SwarmBots THUMB Release/position_control.o
+                0x0000000020000560        0x4 SwarmBots THUMB Release/position_control.o
  .bss.velocity.7687
-                0x0000000020000554        0x1 SwarmBots THUMB Release/position_control.o
+                0x0000000020000564        0x1 SwarmBots THUMB Release/position_control.o
  .bss.isMotorsInitialized
-                0x0000000020000555        0x1 SwarmBots THUMB Release/motors.o
-                0x0000000020000555                isMotorsInitialized
- *fill*         0x0000000020000556        0x2 
+                0x0000000020000565        0x1 SwarmBots THUMB Release/motors.o
+                0x0000000020000565                isMotorsInitialized
+ *fill*         0x0000000020000566        0x2 
  .bss.motorsTimHandle
-                0x0000000020000558       0x40 SwarmBots THUMB Release/motors.o
-                0x0000000020000558                motorsTimHandle
+                0x0000000020000568       0x40 SwarmBots THUMB Release/motors.o
+                0x0000000020000568                motorsTimHandle
  .bss.sMotorsConfig
-                0x0000000020000598       0x1c SwarmBots THUMB Release/motors.o
-                0x0000000020000598                sMotorsConfig
- .bss.uwTick    0x00000000200005b4        0x4 SwarmBots THUMB Release/stm32f0xx_hal.o
-                0x00000000200005b4                uwTick
+                0x00000000200005a8       0x1c SwarmBots THUMB Release/motors.o
+                0x00000000200005a8                sMotorsConfig
+ .bss.uwTick    0x00000000200005c4        0x4 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x00000000200005c4                uwTick
  *(COMMON)
-                0x00000000200005b8                __bss_end__ = (__bss_start__ + SIZEOF (.bss))
-                0x000000000000058c                __bss_size__ = SIZEOF (.bss)
-                0x00000000200005b8                __bss_load_end__ = __bss_end__
+                0x00000000200005c8                __bss_end__ = (__bss_start__ + SIZEOF (.bss))
+                0x0000000000000590                __bss_size__ = SIZEOF (.bss)
+                0x00000000200005c8                __bss_load_end__ = __bss_end__
                 0x0000000000000001                . = ASSERT (((__bss_start__ == __bss_end__) || ((__bss_end__ >= __RAM_segment_start__) && (__bss_end__ <= __RAM_segment_end__))), error: .bss is too large to fit in RAM memory segment)
-                0x00000000200005b8                __tbss_load_start__ = ALIGN (__bss_end__, 0x4)
+                0x00000000200005c8                __tbss_load_start__ = ALIGN (__bss_end__, 0x4)
 
-.tbss           0x00000000200005b8        0x4
-                0x00000000200005b8                __tbss_start__ = .
+.tbss           0x00000000200005c8        0x4
+                0x00000000200005c8                __tbss_start__ = .
  *(.tbss .tbss.*)
  .tbss.errno_val
-                0x00000000200005b8        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
-                0x00000000200005bc                __tbss_end__ = (__tbss_start__ + SIZEOF (.tbss))
+                0x00000000200005c8        0x4 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2.o)
+                0x00000000200005cc                __tbss_end__ = (__tbss_start__ + SIZEOF (.tbss))
                 0x0000000000000004                __tbss_size__ = SIZEOF (.tbss)
-                0x00000000200005bc                __tbss_load_end__ = __tbss_end__
+                0x00000000200005cc                __tbss_load_end__ = __tbss_end__
                 0x0000000000000001                . = ASSERT (((__tbss_start__ == __tbss_end__) || ((__tbss_end__ >= __RAM_segment_start__) && (__tbss_end__ <= __RAM_segment_end__))), error: .tbss is too large to fit in RAM memory segment)
-                0x00000000200005bc                __non_init_load_start__ = ALIGN (__tbss_end__, 0x4)
+                0x00000000200005cc                __non_init_load_start__ = ALIGN (__tbss_end__, 0x4)
 
-.non_init       0x00000000200005bc        0x0
-                0x00000000200005bc                __non_init_start__ = .
+.non_init       0x00000000200005cc        0x0
+                0x00000000200005cc                __non_init_start__ = .
  *(.non_init .non_init.*)
-                0x00000000200005bc                __non_init_end__ = (__non_init_start__ + SIZEOF (.non_init))
+                0x00000000200005cc                __non_init_end__ = (__non_init_start__ + SIZEOF (.non_init))
                 0x0000000000000000                __non_init_size__ = SIZEOF (.non_init)
-                0x00000000200005bc                __non_init_load_end__ = __non_init_end__
+                0x00000000200005cc                __non_init_load_end__ = __non_init_end__
                 0x0000000000000001                . = ASSERT (((__non_init_start__ == __non_init_end__) || ((__non_init_end__ >= __RAM_segment_start__) && (__non_init_end__ <= __RAM_segment_end__))), error: .non_init is too large to fit in RAM memory segment)
-                0x00000000200005bc                __heap_load_start__ = ALIGN (__non_init_end__, 0x4)
+                0x00000000200005cc                __heap_load_start__ = ALIGN (__non_init_end__, 0x4)
 
-.heap           0x00000000200005bc      0x200
-                0x00000000200005bc                __heap_start__ = .
+.heap           0x00000000200005cc      0x200
+                0x00000000200005cc                __heap_start__ = .
  *(.heap .heap.*)
-                0x00000000200007bc                . = ALIGN (MAX ((__heap_start__ + __HEAPSIZE__), .), 0x4)
- *fill*         0x00000000200005bc      0x200 
-                0x00000000200007bc                __heap_end__ = (__heap_start__ + SIZEOF (.heap))
+                0x00000000200007cc                . = ALIGN (MAX ((__heap_start__ + __HEAPSIZE__), .), 0x4)
+ *fill*         0x00000000200005cc      0x200 
+                0x00000000200007cc                __heap_end__ = (__heap_start__ + SIZEOF (.heap))
                 0x0000000000000200                __heap_size__ = SIZEOF (.heap)
-                0x00000000200007bc                __heap_load_end__ = __heap_end__
+                0x00000000200007cc                __heap_load_end__ = __heap_end__
                 0x0000000000000001                . = ASSERT (((__heap_start__ == __heap_end__) || ((__heap_end__ >= __RAM_segment_start__) && (__heap_end__ <= __RAM_segment_end__))), error: .heap is too large to fit in RAM memory segment)
-                0x00000000200007c0                __stack_load_start__ = ALIGN (__heap_end__, 0x8)
+                0x00000000200007d0                __stack_load_start__ = ALIGN (__heap_end__, 0x8)
 
-.stack          0x00000000200007c0      0x400
-                0x00000000200007c0                __stack_start__ = .
+.stack          0x00000000200007d0      0x400
+                0x00000000200007d0                __stack_start__ = .
  *(.stack .stack.*)
-                0x0000000020000bc0                . = ALIGN (MAX ((__stack_start__ + __STACKSIZE__), .), 0x8)
- *fill*         0x00000000200007c0      0x400 
-                0x0000000020000bc0                __stack_end__ = (__stack_start__ + SIZEOF (.stack))
+                0x0000000020000bd0                . = ALIGN (MAX ((__stack_start__ + __STACKSIZE__), .), 0x8)
+ *fill*         0x00000000200007d0      0x400 
+                0x0000000020000bd0                __stack_end__ = (__stack_start__ + SIZEOF (.stack))
                 0x0000000000000400                __stack_size__ = SIZEOF (.stack)
-                0x0000000020000bc0                __stack_load_end__ = __stack_end__
+                0x0000000020000bd0                __stack_load_end__ = __stack_end__
                 0x0000000000000001                . = ASSERT (((__stack_start__ == __stack_end__) || ((__stack_end__ >= __RAM_segment_start__) && (__stack_end__ <= __RAM_segment_end__))), error: .stack is too large to fit in RAM memory segment)
-                0x0000000020000bc0                __stack_process_load_start__ = ALIGN (__stack_end__, 0x8)
+                0x0000000020000bd0                __stack_process_load_start__ = ALIGN (__stack_end__, 0x8)
 
-.stack_process  0x0000000020000bc0        0x0
-                0x0000000020000bc0                __stack_process_start__ = .
+.stack_process  0x0000000020000bd0        0x0
+                0x0000000020000bd0                __stack_process_start__ = .
  *(.stack_process .stack_process.*)
-                0x0000000020000bc0                . = ALIGN (MAX ((__stack_process_start__ + __STACKSIZE_PROCESS__), .), 0x8)
-                0x0000000020000bc0                __stack_process_end__ = (__stack_process_start__ + SIZEOF (.stack_process))
+                0x0000000020000bd0                . = ALIGN (MAX ((__stack_process_start__ + __STACKSIZE_PROCESS__), .), 0x8)
+                0x0000000020000bd0                __stack_process_end__ = (__stack_process_start__ + SIZEOF (.stack_process))
                 0x0000000000000000                __stack_process_size__ = SIZEOF (.stack_process)
-                0x0000000020000bc0                __stack_process_load_end__ = __stack_process_end__
-                0x0000000020000bc0                __RAM_segment_used_end__ = (ALIGN (__stack_end__, 0x8) + SIZEOF (.stack_process))
-                0x0000000000000bc0                __RAM_segment_used_size__ = (__RAM_segment_used_end__ - __RAM_segment_start__)
+                0x0000000020000bd0                __stack_process_load_end__ = __stack_process_end__
+                0x0000000020000bd0                __RAM_segment_used_end__ = (ALIGN (__stack_end__, 0x8) + SIZEOF (.stack_process))
+                0x0000000000000bd0                __RAM_segment_used_size__ = (__RAM_segment_used_end__ - __RAM_segment_start__)
                 0x0000000000000001                . = ASSERT (((__stack_process_start__ == __stack_process_end__) || ((__stack_process_end__ >= __RAM_segment_start__) && (__stack_process_end__ <= __RAM_segment_end__))), error: .stack_process is too large to fit in RAM memory segment)
 START GROUP
 LOAD SwarmBots THUMB Release/stm32f0xx_it.o
@@ -4877,35 +4914,35 @@ LOAD C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libvf
 END GROUP
 OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
 
-.debug_frame    0x0000000000000000     0x4288
+.debug_frame    0x0000000000000000     0x4290
  .debug_frame   0x0000000000000000      0x128 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_frame   0x0000000000000128       0x2c SwarmBots THUMB Release/main.o
  .debug_frame   0x0000000000000154       0xc8 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
  .debug_frame   0x000000000000021c      0x2c0 SwarmBots THUMB Release/utilities.o
  .debug_frame   0x00000000000004dc       0xf0 SwarmBots THUMB Release/qt1070.o
- .debug_frame   0x00000000000005cc      0x134 SwarmBots THUMB Release/functions.o
- .debug_frame   0x0000000000000700      0x37c SwarmBots THUMB Release/lsm6ds3.o
- .debug_frame   0x0000000000000a7c      0x5e0 SwarmBots THUMB Release/RF24.o
- .debug_frame   0x000000000000105c       0xc8 SwarmBots THUMB Release/RingBuffer.o
- .debug_frame   0x0000000000001124      0x1a0 SwarmBots THUMB Release/led.o
- .debug_frame   0x00000000000012c4      0x100 SwarmBots THUMB Release/radio.o
- .debug_frame   0x00000000000013c4      0x140 SwarmBots THUMB Release/sensors.o
- .debug_frame   0x0000000000001504      0x1cc SwarmBots THUMB Release/position_control.o
- .debug_frame   0x00000000000016d0       0x50 SwarmBots THUMB Release/motors.o
- .debug_frame   0x0000000000001720       0x3c SwarmBots THUMB Release/system_stm32f0xx.o
- .debug_frame   0x000000000000175c      0x188 SwarmBots THUMB Release/stm32f0xx_hal.o
- .debug_frame   0x00000000000018e4       0xec SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
- .debug_frame   0x00000000000019d0      0x15c SwarmBots THUMB Release/stm32f0xx_hal_dma.o
- .debug_frame   0x0000000000001b2c       0xf4 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
- .debug_frame   0x0000000000001c20      0x8cc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
- .debug_frame   0x00000000000024ec      0x164 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
- .debug_frame   0x0000000000002650      0x68c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
- .debug_frame   0x0000000000002cdc      0xa70 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
- .debug_frame   0x000000000000374c      0x424 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
- .debug_frame   0x0000000000003b70      0x478 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .debug_frame   0x0000000000003fe8       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
- .debug_frame   0x0000000000004058      0x190 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
- .debug_frame   0x00000000000041e8       0xa0 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
+ .debug_frame   0x00000000000005cc      0x13c SwarmBots THUMB Release/functions.o
+ .debug_frame   0x0000000000000708      0x37c SwarmBots THUMB Release/lsm6ds3.o
+ .debug_frame   0x0000000000000a84      0x5e0 SwarmBots THUMB Release/RF24.o
+ .debug_frame   0x0000000000001064       0xc8 SwarmBots THUMB Release/RingBuffer.o
+ .debug_frame   0x000000000000112c      0x1a0 SwarmBots THUMB Release/led.o
+ .debug_frame   0x00000000000012cc      0x100 SwarmBots THUMB Release/radio.o
+ .debug_frame   0x00000000000013cc      0x140 SwarmBots THUMB Release/sensors.o
+ .debug_frame   0x000000000000150c      0x1cc SwarmBots THUMB Release/position_control.o
+ .debug_frame   0x00000000000016d8       0x50 SwarmBots THUMB Release/motors.o
+ .debug_frame   0x0000000000001728       0x3c SwarmBots THUMB Release/system_stm32f0xx.o
+ .debug_frame   0x0000000000001764      0x188 SwarmBots THUMB Release/stm32f0xx_hal.o
+ .debug_frame   0x00000000000018ec       0xec SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+ .debug_frame   0x00000000000019d8      0x15c SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+ .debug_frame   0x0000000000001b34       0xf4 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+ .debug_frame   0x0000000000001c28      0x8cc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ .debug_frame   0x00000000000024f4      0x164 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+ .debug_frame   0x0000000000002658      0x68c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ .debug_frame   0x0000000000002ce4      0xa70 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+ .debug_frame   0x0000000000003754      0x424 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+ .debug_frame   0x0000000000003b78      0x478 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+ .debug_frame   0x0000000000003ff0       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
+ .debug_frame   0x0000000000004060      0x190 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
+ .debug_frame   0x00000000000041f0       0xa0 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
 
 .debug_info     0x0000000000000000     0x2e63
  .debug_info    0x0000000000000000       0xd9 SwarmBots THUMB Release/stm32f0xx_it.o

@@ -25,6 +25,8 @@ Motor motorValues = {0, 0, 1.0f, 15, 35,60};
 bool isPositionControl = true;
 float targetAngle = 0.0f;
 volatile CHARGING_STATE_t chargingStatus = DISCONNECTED;
+int randSeed = -1;
+uint16_t randomNumber = 0;
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
@@ -71,18 +73,24 @@ Return	:
 Notes   :
 ============================================================================*/
 void updateRobot() {
-  
   if (updateRobotPosition()) {
     prepareMessageToSend(getRobotPosition(), getRobotAngle(), &currentTouch);
     if (isPositionControl)
     {
+      
+      positionControl(currentGoal.x, currentGoal.y, currentGoal.angle, &motorValues, &reached, false, currentGoal.finalGoal, currentGoal.ignoreOrientation);
       if(reached){
-        setRedLed(5);
-        setMotor1(0);
-        setMotor2(0);
+        float dist = sqrt(powf(currentGoal.x - getRobotPosition()->x,2) + powf(currentGoal.y - getRobotPosition()->y, 2));
+        if(dist > 10){
+          reached = false;
+        } 
+        else{
+          setRedLed(5);
+          setMotor1(0);
+          setMotor2(0);
+        }
       }
       else{
-        positionControl(currentGoal.x, currentGoal.y, currentGoal.angle, &motorValues, &reached, false, currentGoal.finalGoal, currentGoal.ignoreOrientation);
         minimumc(&motorValues.motor1, motorValues.minVelocity);
         minimumc(&motorValues.motor2, motorValues.minVelocity);
         maximumc(&motorValues.motor1, motorValues.preferredVelocity);
@@ -136,7 +144,14 @@ void checkRadio() {
   }
   if (remainingCommunicationWatchdog() == 0 && isAddressValid == false)
   {
-        sendAddressRequest();
+    if(randSeed<0){
+      if(updateRobotPosition()){
+        randSeed = getRobotPosition()->x + getRobotPosition()->y;// + getRobotAngle());
+      }
+    }
+    else{
+      sendAddressRequest(randSeed, &randomNumber);
+    }
   }
 }
 
@@ -160,7 +175,7 @@ void handleIncomingRadioMessage() {
     Message msg;
     memset(&msg, 0, sizeof(msg));
     readRadio((uint8_t *)&msg, payloadSize);
-    
+    setRedLed(5);
     if (msg.header.id == RECEIVER_ID) {
       switch (msg.header.type) {
       case TYPE_UPDATE:
@@ -179,7 +194,7 @@ void handleIncomingRadioMessage() {
           currentGoal.x = positionMessage->positionX;
           currentGoal.y = positionMessage->positionY;
           reached = false;
-          setRedLed(0);
+          //setRedLed(0);
         }
         //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
         motorValues.preferredVelocity = positionMessage->preferredSpeed;
@@ -196,17 +211,21 @@ void handleIncomingRadioMessage() {
         break;      
       case TYPE_NEW_ROBOT:
         if (!isAddressValid) {
-          setRedLed(0);
-          setGreenLed(0);
-          setBlueLed(5);
-          setRobotId(msg.payload[0]);
-          memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[1], sizeof(tmpPipeAddress));
-          setRobotPipeAddress(tmpPipeAddress);
-          openCommunication();
-          startListening();
-          if (DEBUG_ENABLED())
-            debug_printf("Info received, id=%d | address=0x%x\n", getRobotId(), getRobotPipeAddress());
-          isAddressValid = true;
+          uint16_t randomNum;
+          memcpy(&randomNum, &msg.payload[1], sizeof(uint16_t));  
+          if(randomNum == randomNumber){
+            setRedLed(0);
+            setGreenLed(0);
+            setBlueLed(5);
+            setRobotId(msg.payload[0]);
+            memcpy((uint8_t *)&tmpPipeAddress, &msg.payload[3], sizeof(tmpPipeAddress));
+            setRobotPipeAddress(tmpPipeAddress);
+            openCommunication();
+            startListening();
+            if (DEBUG_ENABLED())
+              debug_printf("Info received, id=%d | address=0x%x\n", getRobotId(), getRobotPipeAddress());
+            isAddressValid = true;
+          }
         }
         break;
 
@@ -233,6 +252,7 @@ Return	:
 Notes   :
 ============================================================================*/
 void prepareMessageToSend(Position *position, float *orientation, uint8_t *touch) {
+  setRedLed(0);
   int16_t tmpOrientation = 0;
   Message msg;
   msg.header.id = getRobotId();
