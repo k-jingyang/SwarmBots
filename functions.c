@@ -197,8 +197,15 @@ void handleIncomingRadioMessage() {
           //setRedLed(0);
         }
         //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
+
         motorValues.preferredVelocity = positionMessage->preferredSpeed;
         
+        if(positionMessage->preferredSpeed == 0){
+          setMotor1(0);
+          setMotor2(0);
+          isPositionControl = false;
+        }
+
         currentGoal.angle = ((float)positionMessage->orientation)/100.0f;
         currentGoal.ignoreOrientation = positionMessage->ignoreOrientation;
 
