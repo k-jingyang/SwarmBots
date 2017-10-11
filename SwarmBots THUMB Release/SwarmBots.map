@@ -515,31 +515,27 @@ Discarded input sections
                 0x0000000000000000       0x38 SwarmBots THUMB Release/position_control.o
  .text.decreaseVelocity
                 0x0000000000000000       0x40 SwarmBots THUMB Release/position_control.o
- .text.myFunction
-                0x0000000000000000       0xe4 SwarmBots THUMB Release/position_control.o
- .bss.TimerTime.7610
+ .bss.TimerTime.7605
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.aligned.7614
+ .bss.aligned.7609
                 0x0000000000000000        0x1 SwarmBots THUMB Release/position_control.o
- .bss.angleDesired.7608
+ .bss.angleDesired.7603
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.finalangle.7616
+ .bss.finalangle.7611
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.inLoop.7619
+ .bss.inLoop.7614
                 0x0000000000000000        0x1 SwarmBots THUMB Release/position_control.o
- .bss.initialPos2.7621
+ .bss.initialPos2.7616
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.initialangle.7615
+ .bss.initialangle.7610
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.lastTime.7732
+ .bss.lastTime.7727
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .bss.reached.7613
+ .bss.reached.7608
                 0x0000000000000000        0x1 SwarmBots THUMB Release/position_control.o
- .bss.targetAngle.7743
+ .data.CalibrationStatus.7602
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .data.CalibrationStatus.7607
-                0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
- .data.lastCalStatus.7609
+ .data.lastCalStatus.7604
                 0x0000000000000000        0x4 SwarmBots THUMB Release/position_control.o
  .text          0x0000000000000000        0x0 SwarmBots THUMB Release/motors.o
  .data          0x0000000000000000        0x0 SwarmBots THUMB Release/motors.o
@@ -4754,23 +4750,23 @@ Linker script and memory map
  .bss.robotPosition
                 0x0000000020000548        0x4 SwarmBots THUMB Release/sensors.o
                 0x0000000020000548                robotPosition
- .bss.alignCounter.7654
+ .bss.alignCounter.7649
                 0x000000002000054c        0x4 SwarmBots THUMB Release/position_control.o
- .bss.aligned1.7677
+ .bss.aligned1.7672
                 0x0000000020000550        0x1 SwarmBots THUMB Release/position_control.o
- .bss.aligned2.7678
+ .bss.aligned2.7673
                 0x0000000020000551        0x1 SwarmBots THUMB Release/position_control.o
  *fill*         0x0000000020000552        0x2 
- .bss.iTerm.7649
+ .bss.iTerm.7644
                 0x0000000020000554        0x4 SwarmBots THUMB Release/position_control.o
- .bss.justStarted.7685
+ .bss.justStarted.7680
                 0x0000000020000558        0x1 SwarmBots THUMB Release/position_control.o
  *fill*         0x0000000020000559        0x3 
- .bss.lastAngleDiff.7653
+ .bss.lastAngleDiff.7648
                 0x000000002000055c        0x4 SwarmBots THUMB Release/position_control.o
- .bss.lastTime.7726
+ .bss.lastTime.7721
                 0x0000000020000560        0x4 SwarmBots THUMB Release/position_control.o
- .bss.velocity.7687
+ .bss.velocity.7682
                 0x0000000020000564        0x1 SwarmBots THUMB Release/position_control.o
  .bss.isMotorsInitialized
                 0x0000000020000565        0x1 SwarmBots THUMB Release/motors.o
@@ -4914,7 +4910,7 @@ LOAD C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libvf
 END GROUP
 OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
 
-.debug_frame    0x0000000000000000     0x428c
+.debug_frame    0x0000000000000000     0x4258
  .debug_frame   0x0000000000000000      0x128 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_frame   0x0000000000000128       0x2c SwarmBots THUMB Release/main.o
  .debug_frame   0x0000000000000154       0xc8 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
@@ -4927,24 +4923,24 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_frame   0x0000000000001128      0x1a0 SwarmBots THUMB Release/led.o
  .debug_frame   0x00000000000012c8      0x100 SwarmBots THUMB Release/radio.o
  .debug_frame   0x00000000000013c8      0x140 SwarmBots THUMB Release/sensors.o
- .debug_frame   0x0000000000001508      0x1cc SwarmBots THUMB Release/position_control.o
- .debug_frame   0x00000000000016d4       0x50 SwarmBots THUMB Release/motors.o
- .debug_frame   0x0000000000001724       0x3c SwarmBots THUMB Release/system_stm32f0xx.o
- .debug_frame   0x0000000000001760      0x188 SwarmBots THUMB Release/stm32f0xx_hal.o
- .debug_frame   0x00000000000018e8       0xec SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
- .debug_frame   0x00000000000019d4      0x15c SwarmBots THUMB Release/stm32f0xx_hal_dma.o
- .debug_frame   0x0000000000001b30       0xf4 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
- .debug_frame   0x0000000000001c24      0x8cc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
- .debug_frame   0x00000000000024f0      0x164 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
- .debug_frame   0x0000000000002654      0x68c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
- .debug_frame   0x0000000000002ce0      0xa70 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
- .debug_frame   0x0000000000003750      0x424 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
- .debug_frame   0x0000000000003b74      0x478 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
- .debug_frame   0x0000000000003fec       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
- .debug_frame   0x000000000000405c      0x190 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
- .debug_frame   0x00000000000041ec       0xa0 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
+ .debug_frame   0x0000000000001508      0x198 SwarmBots THUMB Release/position_control.o
+ .debug_frame   0x00000000000016a0       0x50 SwarmBots THUMB Release/motors.o
+ .debug_frame   0x00000000000016f0       0x3c SwarmBots THUMB Release/system_stm32f0xx.o
+ .debug_frame   0x000000000000172c      0x188 SwarmBots THUMB Release/stm32f0xx_hal.o
+ .debug_frame   0x00000000000018b4       0xec SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+ .debug_frame   0x00000000000019a0      0x15c SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+ .debug_frame   0x0000000000001afc       0xf4 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+ .debug_frame   0x0000000000001bf0      0x8cc SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ .debug_frame   0x00000000000024bc      0x164 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+ .debug_frame   0x0000000000002620      0x68c SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ .debug_frame   0x0000000000002cac      0xa70 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+ .debug_frame   0x000000000000371c      0x424 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+ .debug_frame   0x0000000000003b40      0x478 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm_asm.o)
+ .debug_frame   0x0000000000003fb8       0x70 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libm_v6m_t_le_eabi.a(libm2_asm.o)
+ .debug_frame   0x0000000000004028      0x190 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc_asm.o)
+ .debug_frame   0x00000000000041b8       0xa0 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.0/lib/libc_v6m_t_le_eabi.a(libc2_asm.o)
 
-.debug_info     0x0000000000000000     0x2e64
+.debug_info     0x0000000000000000     0x2e52
  .debug_info    0x0000000000000000       0xd9 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_info    0x00000000000000d9       0x2f SwarmBots THUMB Release/main.o
  .debug_info    0x0000000000000108       0x75 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
@@ -4957,20 +4953,20 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_info    0x0000000000000c6a      0x125 SwarmBots THUMB Release/led.o
  .debug_info    0x0000000000000d8f      0x11c SwarmBots THUMB Release/radio.o
  .debug_info    0x0000000000000eab      0x108 SwarmBots THUMB Release/sensors.o
- .debug_info    0x0000000000000fb3       0xff SwarmBots THUMB Release/position_control.o
- .debug_info    0x00000000000010b2       0x51 SwarmBots THUMB Release/motors.o
- .debug_info    0x0000000000001103       0x41 SwarmBots THUMB Release/system_stm32f0xx.o
- .debug_info    0x0000000000001144      0x181 SwarmBots THUMB Release/stm32f0xx_hal.o
- .debug_info    0x00000000000012c5      0x232 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
- .debug_info    0x00000000000014f7      0x154 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
- .debug_info    0x000000000000164b       0xad SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
- .debug_info    0x00000000000016f8      0x54c SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
- .debug_info    0x0000000000001c44      0x10d SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
- .debug_info    0x0000000000001d51      0x40e SwarmBots THUMB Release/stm32f0xx_hal_spi.o
- .debug_info    0x000000000000215f      0x892 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
- .debug_info    0x00000000000029f1      0x2c8 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
- .debug_info    0x0000000000002cb9       0xc5 SwarmBots THUMB Release/thumb_crt0.o
- .debug_info    0x0000000000002d7e       0xe6 SwarmBots THUMB Release/STM32_Startup.o
+ .debug_info    0x0000000000000fb3       0xed SwarmBots THUMB Release/position_control.o
+ .debug_info    0x00000000000010a0       0x51 SwarmBots THUMB Release/motors.o
+ .debug_info    0x00000000000010f1       0x41 SwarmBots THUMB Release/system_stm32f0xx.o
+ .debug_info    0x0000000000001132      0x181 SwarmBots THUMB Release/stm32f0xx_hal.o
+ .debug_info    0x00000000000012b3      0x232 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+ .debug_info    0x00000000000014e5      0x154 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+ .debug_info    0x0000000000001639       0xad SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+ .debug_info    0x00000000000016e6      0x54c SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ .debug_info    0x0000000000001c32      0x10d SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+ .debug_info    0x0000000000001d3f      0x40e SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ .debug_info    0x000000000000214d      0x892 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+ .debug_info    0x00000000000029df      0x2c8 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+ .debug_info    0x0000000000002ca7       0xc5 SwarmBots THUMB Release/thumb_crt0.o
+ .debug_info    0x0000000000002d6c       0xe6 SwarmBots THUMB Release/STM32_Startup.o
 
 .debug_abbrev   0x0000000000000000      0xaeb
  .debug_abbrev  0x0000000000000000       0x3c SwarmBots THUMB Release/stm32f0xx_it.o
@@ -5000,7 +4996,7 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000ac5       0x12 SwarmBots THUMB Release/thumb_crt0.o
  .debug_abbrev  0x0000000000000ad7       0x14 SwarmBots THUMB Release/STM32_Startup.o
 
-.debug_aranges  0x0000000000000000     0x13e8
+.debug_aranges  0x0000000000000000     0x13e0
  .debug_aranges
                 0x0000000000000000       0x70 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_aranges
@@ -5026,35 +5022,35 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000678       0x60 SwarmBots THUMB Release/sensors.o
  .debug_aranges
-                0x00000000000006d8       0x78 SwarmBots THUMB Release/position_control.o
+                0x00000000000006d8       0x70 SwarmBots THUMB Release/position_control.o
  .debug_aranges
-                0x0000000000000750       0x30 SwarmBots THUMB Release/motors.o
+                0x0000000000000748       0x30 SwarmBots THUMB Release/motors.o
  .debug_aranges
-                0x0000000000000780       0x28 SwarmBots THUMB Release/system_stm32f0xx.o
+                0x0000000000000778       0x28 SwarmBots THUMB Release/system_stm32f0xx.o
  .debug_aranges
-                0x00000000000007a8       0xb8 SwarmBots THUMB Release/stm32f0xx_hal.o
+                0x00000000000007a0       0xb8 SwarmBots THUMB Release/stm32f0xx_hal.o
  .debug_aranges
-                0x0000000000000860       0x78 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+                0x0000000000000858       0x78 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
  .debug_aranges
-                0x00000000000008d8       0x78 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+                0x00000000000008d0       0x78 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
  .debug_aranges
-                0x0000000000000950       0x58 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+                0x0000000000000948       0x58 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
  .debug_aranges
-                0x00000000000009a8      0x258 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+                0x00000000000009a0      0x258 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
  .debug_aranges
-                0x0000000000000c00       0x80 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+                0x0000000000000bf8       0x80 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
  .debug_aranges
-                0x0000000000000c80      0x1d8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+                0x0000000000000c78      0x1d8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
  .debug_aranges
-                0x0000000000000e58      0x348 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+                0x0000000000000e50      0x348 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
  .debug_aranges
-                0x00000000000011a0      0x148 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+                0x0000000000001198      0x148 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
  .debug_aranges
-                0x00000000000012e8       0xe0 SwarmBots THUMB Release/thumb_crt0.o
+                0x00000000000012e0       0xe0 SwarmBots THUMB Release/thumb_crt0.o
  .debug_aranges
-                0x00000000000013c8       0x20 SwarmBots THUMB Release/STM32_Startup.o
+                0x00000000000013c0       0x20 SwarmBots THUMB Release/STM32_Startup.o
 
-.debug_ranges   0x0000000000000000     0x12d0
+.debug_ranges   0x0000000000000000     0x12c8
  .debug_ranges  0x0000000000000000       0x60 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_ranges  0x0000000000000060       0x10 SwarmBots THUMB Release/main.o
  .debug_ranges  0x0000000000000070       0x30 SwarmBots THUMB Release/stm32f0xx_hal_msp.o
@@ -5067,19 +5063,19 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_ranges  0x0000000000000518       0x80 SwarmBots THUMB Release/led.o
  .debug_ranges  0x0000000000000598       0x60 SwarmBots THUMB Release/radio.o
  .debug_ranges  0x00000000000005f8       0x50 SwarmBots THUMB Release/sensors.o
- .debug_ranges  0x0000000000000648       0x68 SwarmBots THUMB Release/position_control.o
- .debug_ranges  0x00000000000006b0       0x20 SwarmBots THUMB Release/motors.o
- .debug_ranges  0x00000000000006d0       0x18 SwarmBots THUMB Release/system_stm32f0xx.o
- .debug_ranges  0x00000000000006e8       0xa8 SwarmBots THUMB Release/stm32f0xx_hal.o
- .debug_ranges  0x0000000000000790       0x98 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
- .debug_ranges  0x0000000000000828       0x98 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
- .debug_ranges  0x00000000000008c0       0x48 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
- .debug_ranges  0x0000000000000908      0x248 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
- .debug_ranges  0x0000000000000b50       0x70 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
- .debug_ranges  0x0000000000000bc0      0x1c8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
- .debug_ranges  0x0000000000000d88      0x338 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
- .debug_ranges  0x00000000000010c0      0x138 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
- .debug_ranges  0x00000000000011f8       0xd8 SwarmBots THUMB Release/thumb_crt0.o
+ .debug_ranges  0x0000000000000648       0x60 SwarmBots THUMB Release/position_control.o
+ .debug_ranges  0x00000000000006a8       0x20 SwarmBots THUMB Release/motors.o
+ .debug_ranges  0x00000000000006c8       0x18 SwarmBots THUMB Release/system_stm32f0xx.o
+ .debug_ranges  0x00000000000006e0       0xa8 SwarmBots THUMB Release/stm32f0xx_hal.o
+ .debug_ranges  0x0000000000000788       0x98 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+ .debug_ranges  0x0000000000000820       0x98 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+ .debug_ranges  0x00000000000008b8       0x48 SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+ .debug_ranges  0x0000000000000900      0x248 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ .debug_ranges  0x0000000000000b48       0x70 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+ .debug_ranges  0x0000000000000bb8      0x1c8 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ .debug_ranges  0x0000000000000d80      0x338 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+ .debug_ranges  0x00000000000010b8      0x138 SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+ .debug_ranges  0x00000000000011f0       0xd8 SwarmBots THUMB Release/thumb_crt0.o
 
 .debug_line     0x0000000000000000     0x107c
  .debug_line    0x0000000000000000       0x7a SwarmBots THUMB Release/stm32f0xx_it.o
@@ -5109,7 +5105,7 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
  .debug_line    0x0000000000000cce      0x2bf SwarmBots THUMB Release/thumb_crt0.o
  .debug_line    0x0000000000000f8d       0xef SwarmBots THUMB Release/STM32_Startup.o
 
-.debug_str      0x0000000000000000     0x3190
+.debug_str      0x0000000000000000     0x3185
  .debug_str     0x0000000000000000      0x254 SwarmBots THUMB Release/stm32f0xx_it.o
  .debug_str     0x0000000000000254       0x48 SwarmBots THUMB Release/main.o
                                         0x179 (size before relaxing)
@@ -5133,29 +5129,29 @@ OUTPUT(SwarmBots THUMB Release/SwarmBots.elf elf32-littlearm)
                                         0x247 (size before relaxing)
  .debug_str     0x0000000000000ef0      0x105 SwarmBots THUMB Release/sensors.o
                                         0x236 (size before relaxing)
- .debug_str     0x0000000000000ff5       0xd7 SwarmBots THUMB Release/position_control.o
-                                        0x208 (size before relaxing)
- .debug_str     0x00000000000010cc       0x73 SwarmBots THUMB Release/motors.o
+ .debug_str     0x0000000000000ff5       0xcc SwarmBots THUMB Release/position_control.o
+                                        0x1fd (size before relaxing)
+ .debug_str     0x00000000000010c1       0x73 SwarmBots THUMB Release/motors.o
                                         0x1a4 (size before relaxing)
- .debug_str     0x000000000000113f       0x7f SwarmBots THUMB Release/system_stm32f0xx.o
+ .debug_str     0x0000000000001134       0x7f SwarmBots THUMB Release/system_stm32f0xx.o
                                         0x1b0 (size before relaxing)
- .debug_str     0x00000000000011be      0x1a6 SwarmBots THUMB Release/stm32f0xx_hal.o
+ .debug_str     0x00000000000011b3      0x1a6 SwarmBots THUMB Release/stm32f0xx_hal.o
                                         0x2d7 (size before relaxing)
- .debug_str     0x0000000000001364      0x179 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
+ .debug_str     0x0000000000001359      0x179 SwarmBots THUMB Release/stm32f0xx_hal_cortex.o
                                         0x33d (size before relaxing)
- .debug_str     0x00000000000014dd      0x160 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
+ .debug_str     0x00000000000014d2      0x160 SwarmBots THUMB Release/stm32f0xx_hal_dma.o
                                         0x291 (size before relaxing)
- .debug_str     0x000000000000163d       0xde SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
+ .debug_str     0x0000000000001632       0xde SwarmBots THUMB Release/stm32f0xx_hal_gpio.o
                                         0x226 (size before relaxing)
- .debug_str     0x000000000000171b      0x675 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
+ .debug_str     0x0000000000001710      0x675 SwarmBots THUMB Release/stm32f0xx_hal_i2c.o
                                         0x812 (size before relaxing)
- .debug_str     0x0000000000001d90      0x163 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
+ .debug_str     0x0000000000001d85      0x163 SwarmBots THUMB Release/stm32f0xx_hal_rcc.o
                                         0x294 (size before relaxing)
- .debug_str     0x0000000000001ef3      0x4b9 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
+ .debug_str     0x0000000000001ee8      0x4b9 SwarmBots THUMB Release/stm32f0xx_hal_spi.o
                                         0x60c (size before relaxing)
- .debug_str     0x00000000000023ac      0x9a7 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
+ .debug_str     0x00000000000023a1      0x9a7 SwarmBots THUMB Release/stm32f0xx_hal_tim.o
                                         0xaed (size before relaxing)
- .debug_str     0x0000000000002d53      0x43d SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
+ .debug_str     0x0000000000002d48      0x43d SwarmBots THUMB Release/stm32f0xx_hal_tim_ex.o
                                         0x587 (size before relaxing)
 
 .comment        0x0000000000000000       0x4c

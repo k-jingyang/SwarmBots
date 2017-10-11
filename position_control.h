@@ -48,7 +48,6 @@ void minimumc(int8_t* value, int8_t min);
 void maximumc(int8_t* value, int8_t max);
 bool increaseVelocity(int8_t* velocity, Motor* motorValue, uint32_t timeIncrement);
 bool decreaseVelocity(int8_t* velocity, Motor* motorValue, uint32_t timeIncrement);
-void myFunction(int targetX, int targetY, Motor* motorValue, bool* aligned);
 #ifdef __cplusplus
 }
 #endif

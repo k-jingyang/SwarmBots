@@ -146,7 +146,7 @@ void checkRadio() {
   {
     if(randSeed<0){
       if(updateRobotPosition()){
-        randSeed = getRobotPosition()->x + getRobotPosition()->y;// + getRobotAngle());
+        randSeed = getRobotPosition()->x + getRobotPosition()->y;
       }
     }
     else{
@@ -194,7 +194,6 @@ void handleIncomingRadioMessage() {
           currentGoal.x = positionMessage->positionX;
           currentGoal.y = positionMessage->positionY;
           reached = false;
-          //setRedLed(0);
         }
         //setRGBLed(positionMessage->colorRed/8, positionMessage->colorGreen/8, positionMessage->colorBlue/8);
 
